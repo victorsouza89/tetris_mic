@@ -3,6 +3,7 @@
 ## Introdução
 O projeto consistiu em desenvolver, utilizando da plataforma Arduino UNO (Atmega328P), um protótipo funcional do famoso jogo Tetris em uma matriz de leds 8x6. Foi necessário para tal a confecção de uma placa de circuito impresso e da elaboração do algoritmo lógico que será executado pelo microcontrolador.
 
+![Funcionamento](imgs/foto.jpg)
 		
 ## Componentes necessários
 - 48 Leds vermelhos de alto brilho;
@@ -12,6 +13,8 @@ O projeto consistiu em desenvolver, utilizando da plataforma Arduino UNO (Atmega
 - 6 resistores 1k5Ω, ¼W.
 
 > Preço estimado do projeto: R$ 40,00
+
+![Proteus - Esquema](imgs/proteus.jpg)
 
 ## Elaboração do Código
 A parte lógica do projeto foi construída em algumas semanas. Primeiro realizou-se apenas com vistas a parte lógica e, após a placa para testes pronta, realizou-se o debug e os testes do código.
