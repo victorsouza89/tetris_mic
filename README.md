@@ -1,4 +1,5 @@
 # Jogo Tetris 8x6 com matriz de LEDs
+> Projeto realizado na disciplina de Microprocessadores do IFSC em 2017
 
 ## Introdução
 O projeto consistiu em desenvolver, utilizando da plataforma Arduino UNO (Atmega328P), um protótipo funcional do famoso jogo Tetris em uma matriz de leds 8x6. Foi necessário para tal a confecção de uma placa de circuito impresso e da elaboração do algoritmo lógico que será executado pelo microcontrolador.
