@@ -20,3 +20,5 @@ Foram utilizados os timers 0 e 1, para atualização do display e contagem do te
 
 ## Montagem de Placa e Testes de Bancada
 A montagem da Placa de Circuito Impresso consistiu em elaborar o esquemático e a PCI no software Altium e montá-la efetivamente no cobre, furando e soldando os componentes necessários.
+
+![Altium - Esquema](imgs/altium.jpg)
