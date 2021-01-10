@@ -1,0 +1,399 @@
+Added Component: Designator=D1(TO1-5mm-Yellow)
+Add component. Clean all parameters for all variants
+Added Component: Designator=D2(TO1-5mm-Yellow)
+Add component. Clean all parameters for all variants
+Added Component: Designator=D3(TO1-5mm-Yellow)
+Add component. Clean all parameters for all variants
+Added Component: Designator=D4(TO1-5mm-Yellow)
+Add component. Clean all parameters for all variants
+Added Component: Designator=D5(TO1-5mm-Yellow)
+Add component. Clean all parameters for all variants
+Added Component: Designator=D6(TO1-5mm-Yellow)
+Add component. Clean all parameters for all variants
+Added Component: Designator=D7(TO1-5mm-Yellow)
+Add component. Clean all parameters for all variants
+Added Component: Designator=D8(TO1-5mm-Yellow)
+Add component. Clean all parameters for all variants
+Added Component: Designator=D9(TO1-5mm-Yellow)
+Add component. Clean all parameters for all variants
+Added Component: Designator=D10(TO1-5mm-Yellow)
+Add component. Clean all parameters for all variants
+Added Component: Designator=D11(TO1-5mm-Yellow)
+Add component. Clean all parameters for all variants
+Added Component: Designator=D12(TO1-5mm-Yellow)
+Add component. Clean all parameters for all variants
+Added Component: Designator=D13(TO1-5mm-Yellow)
+Add component. Clean all parameters for all variants
+Added Component: Designator=D14(TO1-5mm-Yellow)
+Add component. Clean all parameters for all variants
+Added Component: Designator=D15(TO1-5mm-Yellow)
+Add component. Clean all parameters for all variants
+Added Component: Designator=D16(TO1-5mm-Yellow)
+Add component. Clean all parameters for all variants
+Added Component: Designator=D17(TO1-5mm-Yellow)
+Add component. Clean all parameters for all variants
+Added Component: Designator=D18(TO1-5mm-Yellow)
+Add component. Clean all parameters for all variants
+Added Component: Designator=D19(TO1-5mm-Yellow)
+Add component. Clean all parameters for all variants
+Added Component: Designator=D20(TO1-5mm-Yellow)
+Add component. Clean all parameters for all variants
+Added Component: Designator=D21(TO1-5mm-Yellow)
+Add component. Clean all parameters for all variants
+Added Component: Designator=D22(TO1-5mm-Yellow)
+Add component. Clean all parameters for all variants
+Added Component: Designator=D23(TO1-5mm-Yellow)
+Add component. Clean all parameters for all variants
+Added Component: Designator=D24(TO1-5mm-Yellow)
+Add component. Clean all parameters for all variants
+Added Component: Designator=D25(TO1-5mm-Yellow)
+Add component. Clean all parameters for all variants
+Added Component: Designator=D26(TO1-5mm-Yellow)
+Add component. Clean all parameters for all variants
+Added Component: Designator=D27(TO1-5mm-Yellow)
+Add component. Clean all parameters for all variants
+Added Component: Designator=D28(TO1-5mm-Yellow)
+Add component. Clean all parameters for all variants
+Added Component: Designator=D29(TO1-5mm-Yellow)
+Add component. Clean all parameters for all variants
+Added Component: Designator=D30(TO1-5mm-Yellow)
+Add component. Clean all parameters for all variants
+Added Component: Designator=D31(TO1-5mm-Yellow)
+Add component. Clean all parameters for all variants
+Added Component: Designator=D32(TO1-5mm-Yellow)
+Add component. Clean all parameters for all variants
+Added Component: Designator=D33(TO1-5mm-Yellow)
+Add component. Clean all parameters for all variants
+Added Component: Designator=D34(TO1-5mm-Yellow)
+Add component. Clean all parameters for all variants
+Added Component: Designator=D35(TO1-5mm-Yellow)
+Add component. Clean all parameters for all variants
+Added Component: Designator=D36(TO1-5mm-Yellow)
+Add component. Clean all parameters for all variants
+Added Component: Designator=D37(TO1-5mm-Yellow)
+Add component. Clean all parameters for all variants
+Added Component: Designator=D38(TO1-5mm-Yellow)
+Add component. Clean all parameters for all variants
+Added Component: Designator=D39(TO1-5mm-Yellow)
+Add component. Clean all parameters for all variants
+Added Component: Designator=D40(TO1-5mm-Yellow)
+Add component. Clean all parameters for all variants
+Added Component: Designator=D41(TO1-5mm-Yellow)
+Add component. Clean all parameters for all variants
+Added Component: Designator=D42(TO1-5mm-Yellow)
+Add component. Clean all parameters for all variants
+Added Component: Designator=D43(TO1-5mm-Yellow)
+Add component. Clean all parameters for all variants
+Added Component: Designator=D44(TO1-5mm-Yellow)
+Add component. Clean all parameters for all variants
+Added Component: Designator=D45(TO1-5mm-Yellow)
+Add component. Clean all parameters for all variants
+Added Component: Designator=D46(TO1-5mm-Yellow)
+Add component. Clean all parameters for all variants
+Added Component: Designator=D47(TO1-5mm-Yellow)
+Add component. Clean all parameters for all variants
+Added Component: Designator=D48(TO1-5mm-Yellow)
+Add component. Clean all parameters for all variants
+Added Component: Designator=Porta C(HDR1X6)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=Porta D(HDR1X8)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Component: Designator=Q1(TO-92/CBE)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Base Peak Current (Ibp)"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Collector-Base Voltage (Vcb)"; Value = "50 V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Collector-Emitter Voltage (Vce)"; Value = "45 V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Collector Current (Ic)"; Value = "100 mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Collector Peak Current (Icp)"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Complementary Part"; Value = "BC557"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DC Current Gain Max (hfe)"; Value = "800"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DC Current Gain Min (hfe)"; Value = "110"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Emitter-Base Voltage (Veb)"; Value = "6 V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Total Power Dissipation (Ptot)"; Value = "500 mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Transition Frequency (fT)"; Value = "300 MHz"; VariantName = "[No Variations]"
+Added Component: Designator=Q2(TO-92/CBE)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Base Peak Current (Ibp)"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Collector-Base Voltage (Vcb)"; Value = "50 V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Collector-Emitter Voltage (Vce)"; Value = "45 V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Collector Current (Ic)"; Value = "100 mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Collector Peak Current (Icp)"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Complementary Part"; Value = "BC557"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DC Current Gain Max (hfe)"; Value = "800"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DC Current Gain Min (hfe)"; Value = "110"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Emitter-Base Voltage (Veb)"; Value = "6 V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Total Power Dissipation (Ptot)"; Value = "500 mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Transition Frequency (fT)"; Value = "300 MHz"; VariantName = "[No Variations]"
+Added Component: Designator=Q3(TO-92/CBE)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Base Peak Current (Ibp)"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Collector-Base Voltage (Vcb)"; Value = "50 V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Collector-Emitter Voltage (Vce)"; Value = "45 V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Collector Current (Ic)"; Value = "100 mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Collector Peak Current (Icp)"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Complementary Part"; Value = "BC557"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DC Current Gain Max (hfe)"; Value = "800"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DC Current Gain Min (hfe)"; Value = "110"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Emitter-Base Voltage (Veb)"; Value = "6 V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Total Power Dissipation (Ptot)"; Value = "500 mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Transition Frequency (fT)"; Value = "300 MHz"; VariantName = "[No Variations]"
+Added Component: Designator=Q4(TO-92/CBE)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Base Peak Current (Ibp)"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Collector-Base Voltage (Vcb)"; Value = "50 V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Collector-Emitter Voltage (Vce)"; Value = "45 V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Collector Current (Ic)"; Value = "100 mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Collector Peak Current (Icp)"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Complementary Part"; Value = "BC557"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DC Current Gain Max (hfe)"; Value = "800"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DC Current Gain Min (hfe)"; Value = "110"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Emitter-Base Voltage (Veb)"; Value = "6 V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Total Power Dissipation (Ptot)"; Value = "500 mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Transition Frequency (fT)"; Value = "300 MHz"; VariantName = "[No Variations]"
+Added Component: Designator=Q5(TO-92/CBE)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Base Peak Current (Ibp)"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Collector-Base Voltage (Vcb)"; Value = "50 V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Collector-Emitter Voltage (Vce)"; Value = "45 V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Collector Current (Ic)"; Value = "100 mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Collector Peak Current (Icp)"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Complementary Part"; Value = "BC557"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DC Current Gain Max (hfe)"; Value = "800"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DC Current Gain Min (hfe)"; Value = "110"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Emitter-Base Voltage (Veb)"; Value = "6 V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Total Power Dissipation (Ptot)"; Value = "500 mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Transition Frequency (fT)"; Value = "300 MHz"; VariantName = "[No Variations]"
+Added Component: Designator=Q6(TO-92/CBE)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Base Peak Current (Ibp)"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Collector-Base Voltage (Vcb)"; Value = "50 V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Collector-Emitter Voltage (Vce)"; Value = "45 V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Collector Current (Ic)"; Value = "100 mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Collector Peak Current (Icp)"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Complementary Part"; Value = "BC557"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DC Current Gain Max (hfe)"; Value = "800"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DC Current Gain Min (hfe)"; Value = "110"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Emitter-Base Voltage (Veb)"; Value = "6 V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Total Power Dissipation (Ptot)"; Value = "500 mW"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Transition Frequency (fT)"; Value = "300 MHz"; VariantName = "[No Variations]"
+Added Component: Designator=R1(R400-2.0mm)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "AXIAL-0.3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "8-Jun-2000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "5%"; VariantName = "[No Variations]"
+Added Component: Designator=R2(R400-2.0mm)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "AXIAL-0.3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "8-Jun-2000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "5%"; VariantName = "[No Variations]"
+Added Component: Designator=R3(R400-2.0mm)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "AXIAL-0.3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "8-Jun-2000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "5%"; VariantName = "[No Variations]"
+Added Component: Designator=R4(R400-2.0mm)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "AXIAL-0.3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "8-Jun-2000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "5%"; VariantName = "[No Variations]"
+Added Component: Designator=R5(R400-2.0mm)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "AXIAL-0.3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "8-Jun-2000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "5%"; VariantName = "[No Variations]"
+Added Component: Designator=R6(R400-2.0mm)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "AXIAL-0.3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Published"; Value = "8-Jun-2000"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "5%"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetD1_A Pin=D1-A
+Added Pin To Net: NetName=NetD1_A Pin=D7-A
+Added Pin To Net: NetName=NetD1_A Pin=D13-A
+Added Pin To Net: NetName=NetD1_A Pin=D19-A
+Added Pin To Net: NetName=NetD1_A Pin=D25-A
+Added Pin To Net: NetName=NetD1_A Pin=D31-A
+Added Pin To Net: NetName=NetD1_A Pin=D37-A
+Added Pin To Net: NetName=NetD1_A Pin=D43-A
+Added Pin To Net: NetName=NetD1_A Pin=Q1-E
+Added Net: Name=NetD1_A
+Added Pin To Net: NetName=NetD1_K Pin=D1-K
+Added Pin To Net: NetName=NetD1_K Pin=D2-K
+Added Pin To Net: NetName=NetD1_K Pin=D3-K
+Added Pin To Net: NetName=NetD1_K Pin=D4-K
+Added Pin To Net: NetName=NetD1_K Pin=D5-K
+Added Pin To Net: NetName=NetD1_K Pin=D6-K
+Added Pin To Net: NetName=NetD1_K Pin=Porta D-1
+Added Net: Name=NetD1_K
+Added Pin To Net: NetName=NetD2_A Pin=D2-A
+Added Pin To Net: NetName=NetD2_A Pin=D8-A
+Added Pin To Net: NetName=NetD2_A Pin=D14-A
+Added Pin To Net: NetName=NetD2_A Pin=D20-A
+Added Pin To Net: NetName=NetD2_A Pin=D26-A
+Added Pin To Net: NetName=NetD2_A Pin=D32-A
+Added Pin To Net: NetName=NetD2_A Pin=D38-A
+Added Pin To Net: NetName=NetD2_A Pin=D44-A
+Added Pin To Net: NetName=NetD2_A Pin=Q2-E
+Added Net: Name=NetD2_A
+Added Pin To Net: NetName=NetD3_A Pin=D3-A
+Added Pin To Net: NetName=NetD3_A Pin=D9-A
+Added Pin To Net: NetName=NetD3_A Pin=D15-A
+Added Pin To Net: NetName=NetD3_A Pin=D21-A
+Added Pin To Net: NetName=NetD3_A Pin=D27-A
+Added Pin To Net: NetName=NetD3_A Pin=D33-A
+Added Pin To Net: NetName=NetD3_A Pin=D39-A
+Added Pin To Net: NetName=NetD3_A Pin=D45-A
+Added Pin To Net: NetName=NetD3_A Pin=Q3-E
+Added Net: Name=NetD3_A
+Added Pin To Net: NetName=NetD4_A Pin=D4-A
+Added Pin To Net: NetName=NetD4_A Pin=D10-A
+Added Pin To Net: NetName=NetD4_A Pin=D16-A
+Added Pin To Net: NetName=NetD4_A Pin=D22-A
+Added Pin To Net: NetName=NetD4_A Pin=D28-A
+Added Pin To Net: NetName=NetD4_A Pin=D34-A
+Added Pin To Net: NetName=NetD4_A Pin=D40-A
+Added Pin To Net: NetName=NetD4_A Pin=D46-A
+Added Pin To Net: NetName=NetD4_A Pin=Q4-E
+Added Net: Name=NetD4_A
+Added Pin To Net: NetName=NetD5_A Pin=D5-A
+Added Pin To Net: NetName=NetD5_A Pin=D11-A
+Added Pin To Net: NetName=NetD5_A Pin=D17-A
+Added Pin To Net: NetName=NetD5_A Pin=D23-A
+Added Pin To Net: NetName=NetD5_A Pin=D29-A
+Added Pin To Net: NetName=NetD5_A Pin=D35-A
+Added Pin To Net: NetName=NetD5_A Pin=D41-A
+Added Pin To Net: NetName=NetD5_A Pin=D47-A
+Added Pin To Net: NetName=NetD5_A Pin=Q5-E
+Added Net: Name=NetD5_A
+Added Pin To Net: NetName=NetD6_A Pin=D6-A
+Added Pin To Net: NetName=NetD6_A Pin=D12-A
+Added Pin To Net: NetName=NetD6_A Pin=D18-A
+Added Pin To Net: NetName=NetD6_A Pin=D24-A
+Added Pin To Net: NetName=NetD6_A Pin=D30-A
+Added Pin To Net: NetName=NetD6_A Pin=D36-A
+Added Pin To Net: NetName=NetD6_A Pin=D42-A
+Added Pin To Net: NetName=NetD6_A Pin=D48-A
+Added Pin To Net: NetName=NetD6_A Pin=Q6-E
+Added Net: Name=NetD6_A
+Added Pin To Net: NetName=NetD7_K Pin=D7-K
+Added Pin To Net: NetName=NetD7_K Pin=D8-K
+Added Pin To Net: NetName=NetD7_K Pin=D9-K
+Added Pin To Net: NetName=NetD7_K Pin=D10-K
+Added Pin To Net: NetName=NetD7_K Pin=D11-K
+Added Pin To Net: NetName=NetD7_K Pin=D12-K
+Added Pin To Net: NetName=NetD7_K Pin=Porta D-2
+Added Net: Name=NetD7_K
+Added Pin To Net: NetName=NetD13_K Pin=D13-K
+Added Pin To Net: NetName=NetD13_K Pin=D14-K
+Added Pin To Net: NetName=NetD13_K Pin=D15-K
+Added Pin To Net: NetName=NetD13_K Pin=D16-K
+Added Pin To Net: NetName=NetD13_K Pin=D17-K
+Added Pin To Net: NetName=NetD13_K Pin=D18-K
+Added Pin To Net: NetName=NetD13_K Pin=Porta D-3
+Added Net: Name=NetD13_K
+Added Pin To Net: NetName=NetD19_K Pin=D19-K
+Added Pin To Net: NetName=NetD19_K Pin=D20-K
+Added Pin To Net: NetName=NetD19_K Pin=D21-K
+Added Pin To Net: NetName=NetD19_K Pin=D22-K
+Added Pin To Net: NetName=NetD19_K Pin=D23-K
+Added Pin To Net: NetName=NetD19_K Pin=D24-K
+Added Pin To Net: NetName=NetD19_K Pin=Porta D-4
+Added Net: Name=NetD19_K
+Added Pin To Net: NetName=NetD25_K Pin=D25-K
+Added Pin To Net: NetName=NetD25_K Pin=D26-K
+Added Pin To Net: NetName=NetD25_K Pin=D27-K
+Added Pin To Net: NetName=NetD25_K Pin=D28-K
+Added Pin To Net: NetName=NetD25_K Pin=D29-K
+Added Pin To Net: NetName=NetD25_K Pin=D30-K
+Added Pin To Net: NetName=NetD25_K Pin=Porta D-5
+Added Net: Name=NetD25_K
+Added Pin To Net: NetName=NetD31_K Pin=D31-K
+Added Pin To Net: NetName=NetD31_K Pin=D32-K
+Added Pin To Net: NetName=NetD31_K Pin=D33-K
+Added Pin To Net: NetName=NetD31_K Pin=D34-K
+Added Pin To Net: NetName=NetD31_K Pin=D35-K
+Added Pin To Net: NetName=NetD31_K Pin=D36-K
+Added Pin To Net: NetName=NetD31_K Pin=Porta D-6
+Added Net: Name=NetD31_K
+Added Pin To Net: NetName=NetD37_K Pin=D37-K
+Added Pin To Net: NetName=NetD37_K Pin=D38-K
+Added Pin To Net: NetName=NetD37_K Pin=D39-K
+Added Pin To Net: NetName=NetD37_K Pin=D40-K
+Added Pin To Net: NetName=NetD37_K Pin=D41-K
+Added Pin To Net: NetName=NetD37_K Pin=D42-K
+Added Pin To Net: NetName=NetD37_K Pin=Porta D-7
+Added Net: Name=NetD37_K
+Added Pin To Net: NetName=NetD43_K Pin=D43-K
+Added Pin To Net: NetName=NetD43_K Pin=D44-K
+Added Pin To Net: NetName=NetD43_K Pin=D45-K
+Added Pin To Net: NetName=NetD43_K Pin=D46-K
+Added Pin To Net: NetName=NetD43_K Pin=D47-K
+Added Pin To Net: NetName=NetD43_K Pin=D48-K
+Added Pin To Net: NetName=NetD43_K Pin=Porta D-8
+Added Net: Name=NetD43_K
+Added Pin To Net: NetName=NetPorta C_1 Pin=Porta C-1
+Added Pin To Net: NetName=NetPorta C_1 Pin=Q1-B
+Added Net: Name=NetPorta C_1
+Added Pin To Net: NetName=NetPorta C_2 Pin=Porta C-2
+Added Pin To Net: NetName=NetPorta C_2 Pin=Q2-B
+Added Net: Name=NetPorta C_2
+Added Pin To Net: NetName=NetPorta C_3 Pin=Porta C-3
+Added Pin To Net: NetName=NetPorta C_3 Pin=Q3-B
+Added Net: Name=NetPorta C_3
+Added Pin To Net: NetName=NetPorta C_4 Pin=Porta C-4
+Added Pin To Net: NetName=NetPorta C_4 Pin=Q4-B
+Added Net: Name=NetPorta C_4
+Added Pin To Net: NetName=NetPorta C_5 Pin=Porta C-5
+Added Pin To Net: NetName=NetPorta C_5 Pin=Q5-B
+Added Net: Name=NetPorta C_5
+Added Pin To Net: NetName=NetPorta C_6 Pin=Porta C-6
+Added Pin To Net: NetName=NetPorta C_6 Pin=Q6-B
+Added Net: Name=NetPorta C_6
+Added Pin To Net: NetName=NetQ1_C Pin=Q1-C
+Added Pin To Net: NetName=NetQ1_C Pin=R1-1
+Added Net: Name=NetQ1_C
+Added Pin To Net: NetName=NetQ2_C Pin=Q2-C
+Added Pin To Net: NetName=NetQ2_C Pin=R2-1
+Added Net: Name=NetQ2_C
+Added Pin To Net: NetName=NetQ3_C Pin=Q3-C
+Added Pin To Net: NetName=NetQ3_C Pin=R3-1
+Added Net: Name=NetQ3_C
+Added Pin To Net: NetName=NetQ4_C Pin=Q4-C
+Added Pin To Net: NetName=NetQ4_C Pin=R4-1
+Added Net: Name=NetQ4_C
+Added Pin To Net: NetName=NetQ5_C Pin=Q5-C
+Added Pin To Net: NetName=NetQ5_C Pin=R5-1
+Added Net: Name=NetQ5_C
+Added Pin To Net: NetName=NetQ6_C Pin=Q6-C
+Added Pin To Net: NetName=NetQ6_C Pin=R6-1
+Added Net: Name=NetQ6_C
+Added Pin To Net: NetName=VCC Pin=R1-2
+Added Pin To Net: NetName=VCC Pin=R2-2
+Added Pin To Net: NetName=VCC Pin=R3-2
+Added Pin To Net: NetName=VCC Pin=R4-2
+Added Pin To Net: NetName=VCC Pin=R5-2
+Added Pin To Net: NetName=VCC Pin=R6-2
+Added Net: Name=VCC

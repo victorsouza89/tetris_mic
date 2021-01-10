@@ -1,0 +1,2311 @@
+
+codigoTetris.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         0000007e  00800100  00000b9c  00000c30  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         00000b9c  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000094  0080017e  0080017e  00000cae  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  00000cae  2**0
+                  CONTENTS, READONLY
+  4 .debug_aranges 00000078  00000000  00000000  00000cde  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_info   00000729  00000000  00000000  00000d56  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_abbrev 000001e2  00000000  00000000  0000147f  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   00000332  00000000  00000000  00001661  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_frame  0000020c  00000000  00000000  00001994  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_str    00000261  00000000  00000000  00001ba0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_loc    00000bab  00000000  00000000  00001e01  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_ranges 00000230  00000000  00000000  000029ac  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	0c 94 34 00 	jmp	0x68	; 0x68 <__ctors_end>
+   4:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+   8:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+   c:	0c 94 f0 04 	jmp	0x9e0	; 0x9e0 <__vector_3>
+  10:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  14:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  18:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  1c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  20:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  24:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  28:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  2c:	0c 94 86 05 	jmp	0xb0c	; 0xb0c <__vector_11>
+  30:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  34:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  38:	0c 94 26 05 	jmp	0xa4c	; 0xa4c <__vector_14>
+  3c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  40:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  44:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  48:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  4c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  50:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  54:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  58:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  5c:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  60:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+  64:	0c 94 51 00 	jmp	0xa2	; 0xa2 <__bad_interrupt>
+
+00000068 <__ctors_end>:
+  68:	11 24       	eor	r1, r1
+  6a:	1f be       	out	0x3f, r1	; 63
+  6c:	cf ef       	ldi	r28, 0xFF	; 255
+  6e:	d8 e0       	ldi	r29, 0x08	; 8
+  70:	de bf       	out	0x3e, r29	; 62
+  72:	cd bf       	out	0x3d, r28	; 61
+
+00000074 <__do_copy_data>:
+  74:	11 e0       	ldi	r17, 0x01	; 1
+  76:	a0 e0       	ldi	r26, 0x00	; 0
+  78:	b1 e0       	ldi	r27, 0x01	; 1
+  7a:	ec e9       	ldi	r30, 0x9C	; 156
+  7c:	fb e0       	ldi	r31, 0x0B	; 11
+  7e:	02 c0       	rjmp	.+4      	; 0x84 <__do_copy_data+0x10>
+  80:	05 90       	lpm	r0, Z+
+  82:	0d 92       	st	X+, r0
+  84:	ae 37       	cpi	r26, 0x7E	; 126
+  86:	b1 07       	cpc	r27, r17
+  88:	d9 f7       	brne	.-10     	; 0x80 <__do_copy_data+0xc>
+
+0000008a <__do_clear_bss>:
+  8a:	22 e0       	ldi	r18, 0x02	; 2
+  8c:	ae e7       	ldi	r26, 0x7E	; 126
+  8e:	b1 e0       	ldi	r27, 0x01	; 1
+  90:	01 c0       	rjmp	.+2      	; 0x94 <.do_clear_bss_start>
+
+00000092 <.do_clear_bss_loop>:
+  92:	1d 92       	st	X+, r1
+
+00000094 <.do_clear_bss_start>:
+  94:	a2 31       	cpi	r26, 0x12	; 18
+  96:	b2 07       	cpc	r27, r18
+  98:	e1 f7       	brne	.-8      	; 0x92 <.do_clear_bss_loop>
+  9a:	0e 94 c8 03 	call	0x790	; 0x790 <main>
+  9e:	0c 94 cc 05 	jmp	0xb98	; 0xb98 <_exit>
+
+000000a2 <__bad_interrupt>:
+  a2:	0c 94 00 00 	jmp	0	; 0x0 <__vectors>
+
+000000a6 <checaLinhas>:
+volatile int linha = 0, coluna = 0;
+// Variaveis para controle de Dificuldade e Pontuação
+volatile int ciclosRefresh = 0, pontuacao = 0;
+
+// Função que checa as Linhas para detectar se alguma será excluída
+bool checaLinhas () {
+  a6:	0f 93       	push	r16
+  a8:	1f 93       	push	r17
+  aa:	cf 93       	push	r28
+  ac:	df 93       	push	r29
+  ae:	a6 e8       	ldi	r26, 0x86	; 134
+  b0:	b1 e0       	ldi	r27, 0x01	; 1
+  b2:	6a e0       	ldi	r22, 0x0A	; 10
+  b4:	72 e0       	ldi	r23, 0x02	; 2
+	int j;
+	bool retorno = false;
+  b6:	80 e0       	ldi	r24, 0x00	; 0
+volatile int linha = 0, coluna = 0;
+// Variaveis para controle de Dificuldade e Pontuação
+volatile int ciclosRefresh = 0, pontuacao = 0;
+
+// Função que checa as Linhas para detectar se alguma será excluída
+bool checaLinhas () {
+  b8:	00 e0       	ldi	r16, 0x00	; 0
+  ba:	10 e0       	ldi	r17, 0x00	; 0
+		
+		// Caso haja, marca-a e aumenta a pontuação
+		if (j == 6) {
+			pontuacao += 100;
+			for (int k = 0; k < 6; k++) {
+				matrizLEDs[i][k] = 2;
+  bc:	c2 e0       	ldi	r28, 0x02	; 2
+  be:	d0 e0       	ldi	r29, 0x00	; 0
+			}
+			retorno = true;
+  c0:	91 e0       	ldi	r25, 0x01	; 1
+  c2:	0e c0       	rjmp	.+28     	; 0xe0 <checaLinhas+0x3a>
+	// Corre as linhas do Array de LEDs
+	for (int i = 0; i < 11; i++) {
+	    
+	    // Checa se a linha está preenchida
+		for (j = 0; j < 6; j++) {
+			if (matrizLEDs[i][j] == 0) {
+  c4:	21 91       	ld	r18, Z+
+  c6:	31 91       	ld	r19, Z+
+  c8:	23 2b       	or	r18, r19
+  ca:	31 f0       	breq	.+12     	; 0xd8 <checaLinhas+0x32>
+
+	// Corre as linhas do Array de LEDs
+	for (int i = 0; i < 11; i++) {
+	    
+	    // Checa se a linha está preenchida
+		for (j = 0; j < 6; j++) {
+  cc:	4f 5f       	subi	r20, 0xFF	; 255
+  ce:	5f 4f       	sbci	r21, 0xFF	; 255
+  d0:	46 30       	cpi	r20, 0x06	; 6
+  d2:	51 05       	cpc	r21, r1
+  d4:	b9 f7       	brne	.-18     	; 0xc4 <checaLinhas+0x1e>
+  d6:	08 c0       	rjmp	.+16     	; 0xe8 <checaLinhas+0x42>
+  d8:	1c 96       	adiw	r26, 0x0c	; 12
+bool checaLinhas () {
+	int j;
+	bool retorno = false;
+
+	// Corre as linhas do Array de LEDs
+	for (int i = 0; i < 11; i++) {
+  da:	a6 17       	cp	r26, r22
+  dc:	b7 07       	cpc	r27, r23
+  de:	39 f1       	breq	.+78     	; 0x12e <checaLinhas+0x88>
+volatile int linha = 0, coluna = 0;
+// Variaveis para controle de Dificuldade e Pontuação
+volatile int ciclosRefresh = 0, pontuacao = 0;
+
+// Função que checa as Linhas para detectar se alguma será excluída
+bool checaLinhas () {
+  e0:	fd 01       	movw	r30, r26
+  e2:	40 2f       	mov	r20, r16
+  e4:	51 2f       	mov	r21, r17
+  e6:	ee cf       	rjmp	.-36     	; 0xc4 <checaLinhas+0x1e>
+			}
+		}
+		
+		// Caso haja, marca-a e aumenta a pontuação
+		if (j == 6) {
+			pontuacao += 100;
+  e8:	20 91 7e 01 	lds	r18, 0x017E
+  ec:	30 91 7f 01 	lds	r19, 0x017F
+  f0:	2c 59       	subi	r18, 0x9C	; 156
+  f2:	3f 4f       	sbci	r19, 0xFF	; 255
+  f4:	30 93 7f 01 	sts	0x017F, r19
+  f8:	20 93 7e 01 	sts	0x017E, r18
+			for (int k = 0; k < 6; k++) {
+				matrizLEDs[i][k] = 2;
+  fc:	11 96       	adiw	r26, 0x01	; 1
+  fe:	dc 93       	st	X, r29
+ 100:	ce 93       	st	-X, r28
+ 102:	13 96       	adiw	r26, 0x03	; 3
+ 104:	dc 93       	st	X, r29
+ 106:	ce 93       	st	-X, r28
+ 108:	12 97       	sbiw	r26, 0x02	; 2
+ 10a:	15 96       	adiw	r26, 0x05	; 5
+ 10c:	dc 93       	st	X, r29
+ 10e:	ce 93       	st	-X, r28
+ 110:	14 97       	sbiw	r26, 0x04	; 4
+ 112:	17 96       	adiw	r26, 0x07	; 7
+ 114:	dc 93       	st	X, r29
+ 116:	ce 93       	st	-X, r28
+ 118:	16 97       	sbiw	r26, 0x06	; 6
+ 11a:	19 96       	adiw	r26, 0x09	; 9
+ 11c:	dc 93       	st	X, r29
+ 11e:	ce 93       	st	-X, r28
+ 120:	18 97       	sbiw	r26, 0x08	; 8
+ 122:	1b 96       	adiw	r26, 0x0b	; 11
+ 124:	dc 93       	st	X, r29
+ 126:	ce 93       	st	-X, r28
+ 128:	1a 97       	sbiw	r26, 0x0a	; 10
+			}
+			retorno = true;
+ 12a:	89 2f       	mov	r24, r25
+ 12c:	d5 cf       	rjmp	.-86     	; 0xd8 <checaLinhas+0x32>
+		}
+	}
+
+	return retorno;
+}
+ 12e:	df 91       	pop	r29
+ 130:	cf 91       	pop	r28
+ 132:	1f 91       	pop	r17
+ 134:	0f 91       	pop	r16
+ 136:	08 95       	ret
+
+00000138 <checaGravidade>:
+
+// Função que ativa a gravidade caso haja uma linha marcada
+void checaGravidade () {
+ 138:	cf 92       	push	r12
+ 13a:	df 92       	push	r13
+ 13c:	ef 92       	push	r14
+ 13e:	ff 92       	push	r15
+ 140:	0f 93       	push	r16
+ 142:	1f 93       	push	r17
+ 144:	cf 93       	push	r28
+ 146:	df 93       	push	r29
+ 148:	0e ef       	ldi	r16, 0xFE	; 254
+ 14a:	11 e0       	ldi	r17, 0x01	; 1
+    //Corre as linhas
+	for (int i = 10; i >= 0; i--) {
+ 14c:	6a e0       	ldi	r22, 0x0A	; 10
+ 14e:	70 e0       	ldi	r23, 0x00	; 0
+ 150:	0f 2e       	mov	r0, r31
+ 152:	f6 e8       	ldi	r31, 0x86	; 134
+ 154:	ef 2e       	mov	r14, r31
+ 156:	f1 e0       	ldi	r31, 0x01	; 1
+ 158:	ff 2e       	mov	r15, r31
+ 15a:	f0 2d       	mov	r31, r0
+ 15c:	c2 e9       	ldi	r28, 0x92	; 146
+ 15e:	d1 e0       	ldi	r29, 0x01	; 1
+ 160:	29 c0       	rjmp	.+82     	; 0x1b4 <checaGravidade+0x7c>
+	    // Corre as colunas
+		for (int j = 0; j < 6; j++) {
+ 162:	fa 01       	movw	r30, r20
+ 164:	af 01       	movw	r20, r30
+ 166:	4e 5f       	subi	r20, 0xFE	; 254
+ 168:	5f 4f       	sbci	r21, 0xFF	; 255
+		    // Caso o pixel esteja marcado, atua, substintuindo todos, a partir dele, pelo de cima
+			if (matrizLEDs[i][j] == 2) {
+ 16a:	80 81       	ld	r24, Z
+ 16c:	91 81       	ldd	r25, Z+1	; 0x01
+ 16e:	02 97       	sbiw	r24, 0x02	; 2
+ 170:	a9 f4       	brne	.+42     	; 0x19c <checaGravidade+0x64>
+				for (int k = i; k >= 0; k--) {
+ 172:	77 23       	and	r23, r23
+ 174:	9c f0       	brlt	.+38     	; 0x19c <checaGravidade+0x64>
+ 176:	3c 97       	sbiw	r30, 0x0c	; 12
+ 178:	8c 2d       	mov	r24, r12
+ 17a:	9d 2d       	mov	r25, r13
+					if (k != 0) {
+ 17c:	00 97       	sbiw	r24, 0x00	; 0
+ 17e:	59 f0       	breq	.+22     	; 0x196 <checaGravidade+0x5e>
+						matrizLEDs[k][j] = matrizLEDs[k-1][j];
+ 180:	20 81       	ld	r18, Z
+ 182:	31 81       	ldd	r19, Z+1	; 0x01
+ 184:	35 87       	std	Z+13, r19	; 0x0d
+ 186:	24 87       	std	Z+12, r18	; 0x0c
+	for (int i = 10; i >= 0; i--) {
+	    // Corre as colunas
+		for (int j = 0; j < 6; j++) {
+		    // Caso o pixel esteja marcado, atua, substintuindo todos, a partir dele, pelo de cima
+			if (matrizLEDs[i][j] == 2) {
+				for (int k = i; k >= 0; k--) {
+ 188:	01 97       	sbiw	r24, 0x01	; 1
+ 18a:	3c 97       	sbiw	r30, 0x0c	; 12
+ 18c:	8f 3f       	cpi	r24, 0xFF	; 255
+ 18e:	2f ef       	ldi	r18, 0xFF	; 255
+ 190:	92 07       	cpc	r25, r18
+ 192:	a1 f7       	brne	.-24     	; 0x17c <checaGravidade+0x44>
+ 194:	03 c0       	rjmp	.+6      	; 0x19c <checaGravidade+0x64>
+					if (k != 0) {
+						matrizLEDs[k][j] = matrizLEDs[k-1][j];
+					} else {
+						matrizLEDs[k][j] = 0;
+ 196:	11 96       	adiw	r26, 0x01	; 1
+ 198:	1c 92       	st	X, r1
+ 19a:	1e 92       	st	-X, r1
+ 19c:	12 96       	adiw	r26, 0x02	; 2
+// Função que ativa a gravidade caso haja uma linha marcada
+void checaGravidade () {
+    //Corre as linhas
+	for (int i = 10; i >= 0; i--) {
+	    // Corre as colunas
+		for (int j = 0; j < 6; j++) {
+ 19e:	ac 17       	cp	r26, r28
+ 1a0:	bd 07       	cpc	r27, r29
+ 1a2:	f9 f6       	brne	.-66     	; 0x162 <checaGravidade+0x2a>
+}
+
+// Função que ativa a gravidade caso haja uma linha marcada
+void checaGravidade () {
+    //Corre as linhas
+	for (int i = 10; i >= 0; i--) {
+ 1a4:	61 50       	subi	r22, 0x01	; 1
+ 1a6:	71 09       	sbc	r23, r1
+ 1a8:	0c 50       	subi	r16, 0x0C	; 12
+ 1aa:	11 09       	sbc	r17, r1
+ 1ac:	6f 3f       	cpi	r22, 0xFF	; 255
+ 1ae:	8f ef       	ldi	r24, 0xFF	; 255
+ 1b0:	78 07       	cpc	r23, r24
+ 1b2:	29 f0       	breq	.+10     	; 0x1be <checaGravidade+0x86>
+ 1b4:	d7 01       	movw	r26, r14
+	    // Corre as colunas
+		for (int j = 0; j < 6; j++) {
+ 1b6:	f8 01       	movw	r30, r16
+		    // Caso o pixel esteja marcado, atua, substintuindo todos, a partir dele, pelo de cima
+			if (matrizLEDs[i][j] == 2) {
+				for (int k = i; k >= 0; k--) {
+ 1b8:	c6 2e       	mov	r12, r22
+ 1ba:	d7 2e       	mov	r13, r23
+ 1bc:	d3 cf       	rjmp	.-90     	; 0x164 <checaGravidade+0x2c>
+					}
+				}
+			}
+		}
+	}
+}
+ 1be:	df 91       	pop	r29
+ 1c0:	cf 91       	pop	r28
+ 1c2:	1f 91       	pop	r17
+ 1c4:	0f 91       	pop	r16
+ 1c6:	ff 90       	pop	r15
+ 1c8:	ef 90       	pop	r14
+ 1ca:	df 90       	pop	r13
+ 1cc:	cf 90       	pop	r12
+ 1ce:	08 95       	ret
+
+000001d0 <checaDerrota>:
+
+// Checa se há uma peça na primera linha do display
+void checaDerrota () {
+ 1d0:	ea ea       	ldi	r30, 0xAA	; 170
+ 1d2:	f1 e0       	ldi	r31, 0x01	; 1
+ 1d4:	26 eb       	ldi	r18, 0xB6	; 182
+ 1d6:	31 e0       	ldi	r19, 0x01	; 1
+	for (int i = 0; i < 6; i++) {
+		if (matrizLEDs[3][i] == 1) {
+			end = true;
+ 1d8:	41 e0       	ldi	r20, 0x01	; 1
+}
+
+// Checa se há uma peça na primera linha do display
+void checaDerrota () {
+	for (int i = 0; i < 6; i++) {
+		if (matrizLEDs[3][i] == 1) {
+ 1da:	81 91       	ld	r24, Z+
+ 1dc:	91 91       	ld	r25, Z+
+ 1de:	01 97       	sbiw	r24, 0x01	; 1
+ 1e0:	21 f4       	brne	.+8      	; 0x1ea <checaDerrota+0x1a>
+			end = true;
+ 1e2:	40 93 0f 02 	sts	0x020F, r20
+			start = true;
+ 1e6:	40 93 0a 02 	sts	0x020A, r20
+	}
+}
+
+// Checa se há uma peça na primera linha do display
+void checaDerrota () {
+	for (int i = 0; i < 6; i++) {
+ 1ea:	e2 17       	cp	r30, r18
+ 1ec:	f3 07       	cpc	r31, r19
+ 1ee:	a9 f7       	brne	.-22     	; 0x1da <checaDerrota+0xa>
+		if (matrizLEDs[3][i] == 1) {
+			end = true;
+			start = true;
+		}
+	}
+}
+ 1f0:	08 95       	ret
+
+000001f2 <checaBloco>:
+
+// Checa se há um bloco caindo em jogo, retorna o resultado booleano
+bool checaBloco () {
+ 1f2:	48 e8       	ldi	r20, 0x88	; 136
+ 1f4:	51 e0       	ldi	r21, 0x01	; 1
+ 1f6:	6c e0       	ldi	r22, 0x0C	; 12
+ 1f8:	72 e0       	ldi	r23, 0x02	; 2
+	for (int i = 0; i < 11; i++) {
+		for (int j = 0; j < 6; j++) {
+ 1fa:	b1 e0       	ldi	r27, 0x01	; 1
+ 1fc:	a0 e0       	ldi	r26, 0x00	; 0
+ 1fe:	0e c0       	rjmp	.+28     	; 0x21c <checaBloco+0x2a>
+			if (matrizLEDs[i][j] == 3) {
+ 200:	21 91       	ld	r18, Z+
+ 202:	31 91       	ld	r19, Z+
+ 204:	23 30       	cpi	r18, 0x03	; 3
+ 206:	31 05       	cpc	r19, r1
+ 208:	99 f0       	breq	.+38     	; 0x230 <checaBloco+0x3e>
+}
+
+// Checa se há um bloco caindo em jogo, retorna o resultado booleano
+bool checaBloco () {
+	for (int i = 0; i < 11; i++) {
+		for (int j = 0; j < 6; j++) {
+ 20a:	01 96       	adiw	r24, 0x01	; 1
+ 20c:	86 30       	cpi	r24, 0x06	; 6
+ 20e:	91 05       	cpc	r25, r1
+ 210:	b9 f7       	brne	.-18     	; 0x200 <checaBloco+0xe>
+ 212:	44 5f       	subi	r20, 0xF4	; 244
+ 214:	5f 4f       	sbci	r21, 0xFF	; 255
+	}
+}
+
+// Checa se há um bloco caindo em jogo, retorna o resultado booleano
+bool checaBloco () {
+	for (int i = 0; i < 11; i++) {
+ 216:	46 17       	cp	r20, r22
+ 218:	57 07       	cpc	r21, r23
+ 21a:	61 f0       	breq	.+24     	; 0x234 <checaBloco+0x42>
+ 21c:	fa 01       	movw	r30, r20
+ 21e:	32 97       	sbiw	r30, 0x02	; 2
+		for (int j = 0; j < 6; j++) {
+			if (matrizLEDs[i][j] == 3) {
+ 220:	80 81       	ld	r24, Z
+ 222:	91 81       	ldd	r25, Z+1	; 0x01
+ 224:	03 97       	sbiw	r24, 0x03	; 3
+ 226:	41 f0       	breq	.+16     	; 0x238 <checaBloco+0x46>
+ 228:	fa 01       	movw	r30, r20
+}
+
+// Checa se há um bloco caindo em jogo, retorna o resultado booleano
+bool checaBloco () {
+	for (int i = 0; i < 11; i++) {
+		for (int j = 0; j < 6; j++) {
+ 22a:	8b 2f       	mov	r24, r27
+ 22c:	9a 2f       	mov	r25, r26
+ 22e:	e8 cf       	rjmp	.-48     	; 0x200 <checaBloco+0xe>
+			if (matrizLEDs[i][j] == 3) {
+				return true;
+ 230:	81 e0       	ldi	r24, 0x01	; 1
+ 232:	08 95       	ret
+			}
+		}
+	}
+	
+	return false;
+ 234:	80 e0       	ldi	r24, 0x00	; 0
+ 236:	08 95       	ret
+// Checa se há um bloco caindo em jogo, retorna o resultado booleano
+bool checaBloco () {
+	for (int i = 0; i < 11; i++) {
+		for (int j = 0; j < 6; j++) {
+			if (matrizLEDs[i][j] == 3) {
+				return true;
+ 238:	81 e0       	ldi	r24, 0x01	; 1
+			}
+		}
+	}
+	
+	return false;
+}
+ 23a:	08 95       	ret
+
+0000023c <moveBloco>:
+
+// Move o bloco (parâmetro d==0 move para a esquerda, d!=0 move para a direita)
+void moveBloco (bool d) {
+ 23c:	0f 93       	push	r16
+ 23e:	1f 93       	push	r17
+ 240:	cf 93       	push	r28
+ 242:	df 93       	push	r29
+	bool move = true;
+
+	if (d) {
+ 244:	81 11       	cpse	r24, r1
+ 246:	09 c0       	rjmp	.+18     	; 0x25a <moveBloco+0x1e>
+ 248:	6a e0       	ldi	r22, 0x0A	; 10
+ 24a:	72 e0       	ldi	r23, 0x02	; 2
+ 24c:	46 e8       	ldi	r20, 0x86	; 134
+ 24e:	51 e0       	ldi	r21, 0x01	; 1
+ 250:	11 e0       	ldi	r17, 0x01	; 1
+		// Checa se o movimento é possível
+		for (int i = 0; i < 11; i++) {
+			for (int j = 0; j < 6; j++) {
+				if (matrizLEDs[i][j] == 3) {
+					if (j == 0 || matrizLEDs[i][j-1] == 1) {
+						move = false;
+ 252:	d0 e0       	ldi	r29, 0x00	; 0
+ 254:	c0 e0       	ldi	r28, 0x00	; 0
+ 256:	00 e0       	ldi	r16, 0x00	; 0
+ 258:	61 c0       	rjmp	.+194    	; 0x31c <moveBloco+0xe0>
+ 25a:	6a e0       	ldi	r22, 0x0A	; 10
+ 25c:	72 e0       	ldi	r23, 0x02	; 2
+
+// Move o bloco (parâmetro d==0 move para a esquerda, d!=0 move para a direita)
+void moveBloco (bool d) {
+	bool move = true;
+
+	if (d) {
+ 25e:	46 e8       	ldi	r20, 0x86	; 134
+ 260:	51 e0       	ldi	r21, 0x01	; 1
+ 262:	c1 e0       	ldi	r28, 0x01	; 1
+	
+	return false;
+}
+
+// Move o bloco (parâmetro d==0 move para a esquerda, d!=0 move para a direita)
+void moveBloco (bool d) {
+ 264:	b0 e0       	ldi	r27, 0x00	; 0
+ 266:	a0 e0       	ldi	r26, 0x00	; 0
+		// Checa se o movimento é possível
+		for (int i = 0; i < 11; i++) {
+			for (int j = 0; j < 6; j++) {
+				if (matrizLEDs[i][j] == 3) {
+					if (j == 5 || matrizLEDs[i][j+1] == 1) {
+						move = false;
+ 268:	10 e0       	ldi	r17, 0x00	; 0
+ 26a:	d1 2f       	mov	r29, r17
+ 26c:	19 c0       	rjmp	.+50     	; 0x2a0 <moveBloco+0x64>
+		// Move para a Direita
+		
+		// Checa se o movimento é possível
+		for (int i = 0; i < 11; i++) {
+			for (int j = 0; j < 6; j++) {
+				if (matrizLEDs[i][j] == 3) {
+ 26e:	21 91       	ld	r18, Z+
+ 270:	31 91       	ld	r19, Z+
+ 272:	23 30       	cpi	r18, 0x03	; 3
+ 274:	31 05       	cpc	r19, r1
+ 276:	49 f4       	brne	.+18     	; 0x28a <moveBloco+0x4e>
+					if (j == 5 || matrizLEDs[i][j+1] == 1) {
+ 278:	85 30       	cpi	r24, 0x05	; 5
+ 27a:	91 05       	cpc	r25, r1
+ 27c:	59 f0       	breq	.+22     	; 0x294 <moveBloco+0x58>
+ 27e:	20 81       	ld	r18, Z
+ 280:	31 81       	ldd	r19, Z+1	; 0x01
+ 282:	21 30       	cpi	r18, 0x01	; 1
+ 284:	31 05       	cpc	r19, r1
+ 286:	09 f4       	brne	.+2      	; 0x28a <moveBloco+0x4e>
+						move = false;
+ 288:	cd 2f       	mov	r28, r29
+	if (d) {
+		// Move para a Direita
+		
+		// Checa se o movimento é possível
+		for (int i = 0; i < 11; i++) {
+			for (int j = 0; j < 6; j++) {
+ 28a:	01 96       	adiw	r24, 0x01	; 1
+ 28c:	86 30       	cpi	r24, 0x06	; 6
+ 28e:	91 05       	cpc	r25, r1
+ 290:	71 f7       	brne	.-36     	; 0x26e <moveBloco+0x32>
+ 292:	01 c0       	rjmp	.+2      	; 0x296 <moveBloco+0x5a>
+				if (matrizLEDs[i][j] == 3) {
+					if (j == 5 || matrizLEDs[i][j+1] == 1) {
+						move = false;
+ 294:	c1 2f       	mov	r28, r17
+ 296:	44 5f       	subi	r20, 0xF4	; 244
+ 298:	5f 4f       	sbci	r21, 0xFF	; 255
+
+	if (d) {
+		// Move para a Direita
+		
+		// Checa se o movimento é possível
+		for (int i = 0; i < 11; i++) {
+ 29a:	46 17       	cp	r20, r22
+ 29c:	57 07       	cpc	r21, r23
+ 29e:	21 f0       	breq	.+8      	; 0x2a8 <moveBloco+0x6c>
+	
+	return false;
+}
+
+// Move o bloco (parâmetro d==0 move para a esquerda, d!=0 move para a direita)
+void moveBloco (bool d) {
+ 2a0:	fa 01       	movw	r30, r20
+ 2a2:	8b 2f       	mov	r24, r27
+ 2a4:	9a 2f       	mov	r25, r26
+ 2a6:	e3 cf       	rjmp	.-58     	; 0x26e <moveBloco+0x32>
+				}
+			}
+		}
+
+        // Realiza o Movimento
+		if (move) {
+ 2a8:	cc 23       	and	r28, r28
+ 2aa:	09 f4       	brne	.+2      	; 0x2ae <moveBloco+0x72>
+ 2ac:	5f c0       	rjmp	.+190    	; 0x36c <moveBloco+0x130>
+ 2ae:	42 e9       	ldi	r20, 0x92	; 146
+ 2b0:	51 e0       	ldi	r21, 0x01	; 1
+ 2b2:	a6 e1       	ldi	r26, 0x16	; 22
+ 2b4:	b2 e0       	ldi	r27, 0x02	; 2
+
+// Move o bloco (parâmetro d==0 move para a esquerda, d!=0 move para a direita)
+void moveBloco (bool d) {
+	bool move = true;
+
+	if (d) {
+ 2b6:	d6 e0       	ldi	r29, 0x06	; 6
+ 2b8:	c0 e0       	ldi	r28, 0x00	; 0
+		if (move) {
+			for (int i = 0; i < 11; i++) {
+				for (int j = 5; j >= 0; j--) {
+					if (matrizLEDs[i][j] == 3) {
+						matrizLEDs[i][j] = 0;
+						matrizLEDs[i][j+1] = 3;
+ 2ba:	63 e0       	ldi	r22, 0x03	; 3
+ 2bc:	70 e0       	ldi	r23, 0x00	; 0
+ 2be:	12 c0       	rjmp	.+36     	; 0x2e4 <moveBloco+0xa8>
+
+        // Realiza o Movimento
+		if (move) {
+			for (int i = 0; i < 11; i++) {
+				for (int j = 5; j >= 0; j--) {
+					if (matrizLEDs[i][j] == 3) {
+ 2c0:	32 91       	ld	r19, -Z
+ 2c2:	22 91       	ld	r18, -Z
+ 2c4:	23 30       	cpi	r18, 0x03	; 3
+ 2c6:	31 05       	cpc	r19, r1
+ 2c8:	21 f4       	brne	.+8      	; 0x2d2 <moveBloco+0x96>
+						matrizLEDs[i][j] = 0;
+ 2ca:	11 82       	std	Z+1, r1	; 0x01
+ 2cc:	10 82       	st	Z, r1
+						matrizLEDs[i][j+1] = 3;
+ 2ce:	73 83       	std	Z+3, r23	; 0x03
+ 2d0:	62 83       	std	Z+2, r22	; 0x02
+ 2d2:	01 97       	sbiw	r24, 0x01	; 1
+		}
+
+        // Realiza o Movimento
+		if (move) {
+			for (int i = 0; i < 11; i++) {
+				for (int j = 5; j >= 0; j--) {
+ 2d4:	00 97       	sbiw	r24, 0x00	; 0
+ 2d6:	a1 f7       	brne	.-24     	; 0x2c0 <moveBloco+0x84>
+ 2d8:	44 5f       	subi	r20, 0xF4	; 244
+ 2da:	5f 4f       	sbci	r21, 0xFF	; 255
+			}
+		}
+
+        // Realiza o Movimento
+		if (move) {
+			for (int i = 0; i < 11; i++) {
+ 2dc:	4a 17       	cp	r20, r26
+ 2de:	5b 07       	cpc	r21, r27
+ 2e0:	09 f4       	brne	.+2      	; 0x2e4 <moveBloco+0xa8>
+ 2e2:	44 c0       	rjmp	.+136    	; 0x36c <moveBloco+0x130>
+
+// Move o bloco (parâmetro d==0 move para a esquerda, d!=0 move para a direita)
+void moveBloco (bool d) {
+	bool move = true;
+
+	if (d) {
+ 2e4:	fa 01       	movw	r30, r20
+ 2e6:	8d 2f       	mov	r24, r29
+ 2e8:	9c 2f       	mov	r25, r28
+ 2ea:	ea cf       	rjmp	.-44     	; 0x2c0 <moveBloco+0x84>
+		// Move para a Esquerda
+		
+		// Checa se o movimento é possível
+		for (int i = 0; i < 11; i++) {
+			for (int j = 0; j < 6; j++) {
+				if (matrizLEDs[i][j] == 3) {
+ 2ec:	21 91       	ld	r18, Z+
+ 2ee:	31 91       	ld	r19, Z+
+ 2f0:	23 30       	cpi	r18, 0x03	; 3
+ 2f2:	31 05       	cpc	r19, r1
+ 2f4:	51 f4       	brne	.+20     	; 0x30a <moveBloco+0xce>
+					if (j == 0 || matrizLEDs[i][j-1] == 1) {
+ 2f6:	00 97       	sbiw	r24, 0x00	; 0
+ 2f8:	b1 f1       	breq	.+108    	; 0x366 <moveBloco+0x12a>
+ 2fa:	df 01       	movw	r26, r30
+ 2fc:	14 97       	sbiw	r26, 0x04	; 4
+ 2fe:	2d 91       	ld	r18, X+
+ 300:	3c 91       	ld	r19, X
+ 302:	21 30       	cpi	r18, 0x01	; 1
+ 304:	31 05       	cpc	r19, r1
+ 306:	09 f4       	brne	.+2      	; 0x30a <moveBloco+0xce>
+						move = false;
+ 308:	10 2f       	mov	r17, r16
+	} else {
+		// Move para a Esquerda
+		
+		// Checa se o movimento é possível
+		for (int i = 0; i < 11; i++) {
+			for (int j = 0; j < 6; j++) {
+ 30a:	01 96       	adiw	r24, 0x01	; 1
+ 30c:	86 30       	cpi	r24, 0x06	; 6
+ 30e:	91 05       	cpc	r25, r1
+ 310:	69 f7       	brne	.-38     	; 0x2ec <moveBloco+0xb0>
+ 312:	44 5f       	subi	r20, 0xF4	; 244
+ 314:	5f 4f       	sbci	r21, 0xFF	; 255
+		}
+	} else {
+		// Move para a Esquerda
+		
+		// Checa se o movimento é possível
+		for (int i = 0; i < 11; i++) {
+ 316:	46 17       	cp	r20, r22
+ 318:	57 07       	cpc	r21, r23
+ 31a:	21 f0       	breq	.+8      	; 0x324 <moveBloco+0xe8>
+			for (int j = 0; j < 6; j++) {
+				if (matrizLEDs[i][j] == 3) {
+					if (j == 0 || matrizLEDs[i][j-1] == 1) {
+						move = false;
+ 31c:	fa 01       	movw	r30, r20
+ 31e:	8d 2f       	mov	r24, r29
+ 320:	9c 2f       	mov	r25, r28
+ 322:	e4 cf       	rjmp	.-56     	; 0x2ec <moveBloco+0xb0>
+				}
+			}
+		}
+
+        // Realiza o Movimento
+		if (move) {
+ 324:	11 23       	and	r17, r17
+ 326:	11 f1       	breq	.+68     	; 0x36c <moveBloco+0x130>
+ 328:	44 e8       	ldi	r20, 0x84	; 132
+ 32a:	51 e0       	ldi	r21, 0x01	; 1
+ 32c:	a8 e0       	ldi	r26, 0x08	; 8
+ 32e:	b2 e0       	ldi	r27, 0x02	; 2
+
+// Move o bloco (parâmetro d==0 move para a esquerda, d!=0 move para a direita)
+void moveBloco (bool d) {
+	bool move = true;
+
+	if (d) {
+ 330:	d6 e0       	ldi	r29, 0x06	; 6
+ 332:	c0 e0       	ldi	r28, 0x00	; 0
+		if (move) {
+			for (int i = 0; i < 11; i++) {
+				for (int j = 0; j < 6; j++) {
+					if (matrizLEDs[i][j] == 3) {
+						matrizLEDs[i][j] = 0;
+						matrizLEDs[i][j-1] = 3;
+ 334:	63 e0       	ldi	r22, 0x03	; 3
+ 336:	70 e0       	ldi	r23, 0x00	; 0
+ 338:	12 c0       	rjmp	.+36     	; 0x35e <moveBloco+0x122>
+
+        // Realiza o Movimento
+		if (move) {
+			for (int i = 0; i < 11; i++) {
+				for (int j = 0; j < 6; j++) {
+					if (matrizLEDs[i][j] == 3) {
+ 33a:	22 81       	ldd	r18, Z+2	; 0x02
+ 33c:	33 81       	ldd	r19, Z+3	; 0x03
+ 33e:	23 30       	cpi	r18, 0x03	; 3
+ 340:	31 05       	cpc	r19, r1
+ 342:	21 f4       	brne	.+8      	; 0x34c <moveBloco+0x110>
+						matrizLEDs[i][j] = 0;
+ 344:	13 82       	std	Z+3, r1	; 0x03
+ 346:	12 82       	std	Z+2, r1	; 0x02
+						matrizLEDs[i][j-1] = 3;
+ 348:	71 83       	std	Z+1, r23	; 0x01
+ 34a:	60 83       	st	Z, r22
+ 34c:	01 97       	sbiw	r24, 0x01	; 1
+ 34e:	32 96       	adiw	r30, 0x02	; 2
+		}
+
+        // Realiza o Movimento
+		if (move) {
+			for (int i = 0; i < 11; i++) {
+				for (int j = 0; j < 6; j++) {
+ 350:	00 97       	sbiw	r24, 0x00	; 0
+ 352:	99 f7       	brne	.-26     	; 0x33a <moveBloco+0xfe>
+ 354:	44 5f       	subi	r20, 0xF4	; 244
+ 356:	5f 4f       	sbci	r21, 0xFF	; 255
+			}
+		}
+
+        // Realiza o Movimento
+		if (move) {
+			for (int i = 0; i < 11; i++) {
+ 358:	4a 17       	cp	r20, r26
+ 35a:	5b 07       	cpc	r21, r27
+ 35c:	39 f0       	breq	.+14     	; 0x36c <moveBloco+0x130>
+
+// Move o bloco (parâmetro d==0 move para a esquerda, d!=0 move para a direita)
+void moveBloco (bool d) {
+	bool move = true;
+
+	if (d) {
+ 35e:	fa 01       	movw	r30, r20
+ 360:	8d 2f       	mov	r24, r29
+ 362:	9c 2f       	mov	r25, r28
+ 364:	ea cf       	rjmp	.-44     	; 0x33a <moveBloco+0xfe>
+	} else {
+		// Move para a Esquerda
+		
+		// Checa se o movimento é possível
+		for (int i = 0; i < 11; i++) {
+			for (int j = 0; j < 6; j++) {
+ 366:	01 96       	adiw	r24, 0x01	; 1
+				if (matrizLEDs[i][j] == 3) {
+					if (j == 0 || matrizLEDs[i][j-1] == 1) {
+						move = false;
+ 368:	10 2f       	mov	r17, r16
+ 36a:	c0 cf       	rjmp	.-128    	; 0x2ec <moveBloco+0xb0>
+					}
+				}
+			}
+		}
+	}
+}
+ 36c:	df 91       	pop	r29
+ 36e:	cf 91       	pop	r28
+ 370:	1f 91       	pop	r17
+ 372:	0f 91       	pop	r16
+ 374:	08 95       	ret
+
+00000376 <caiBloco>:
+
+// Função que checa se o Bloco pode cair e o faz, caso possível. Retorna se realizou a queda
+bool caiBloco () {
+ 376:	1f 93       	push	r17
+ 378:	cf 93       	push	r28
+ 37a:	df 93       	push	r29
+ 37c:	42 e9       	ldi	r20, 0x92	; 146
+ 37e:	51 e0       	ldi	r21, 0x01	; 1
+	bool cai = true;
+    
+    // Checa se é possível cair
+	for (int i = 0; i < 11; i++) {
+ 380:	60 e0       	ldi	r22, 0x00	; 0
+ 382:	70 e0       	ldi	r23, 0x00	; 0
+	}
+}
+
+// Função que checa se o Bloco pode cair e o faz, caso possível. Retorna se realizou a queda
+bool caiBloco () {
+	bool cai = true;
+ 384:	81 e0       	ldi	r24, 0x01	; 1
+    // Checa se é possível cair
+	for (int i = 0; i < 11; i++) {
+		for (int j = 0; j < 6; j++) {
+			if (matrizLEDs[i][j] == 3) {
+				if (i == 10 || matrizLEDs[i+1][j] == 1) {
+					cai = false;
+ 386:	90 e0       	ldi	r25, 0x00	; 0
+ 388:	1b c0       	rjmp	.+54     	; 0x3c0 <caiBloco+0x4a>
+	bool cai = true;
+    
+    // Checa se é possível cair
+	for (int i = 0; i < 11; i++) {
+		for (int j = 0; j < 6; j++) {
+			if (matrizLEDs[i][j] == 3) {
+ 38a:	21 91       	ld	r18, Z+
+ 38c:	31 91       	ld	r19, Z+
+ 38e:	23 30       	cpi	r18, 0x03	; 3
+ 390:	31 05       	cpc	r19, r1
+ 392:	61 f4       	brne	.+24     	; 0x3ac <caiBloco+0x36>
+				if (i == 10 || matrizLEDs[i+1][j] == 1) {
+ 394:	6a 30       	cpi	r22, 0x0A	; 10
+ 396:	71 05       	cpc	r23, r1
+ 398:	31 f0       	breq	.+12     	; 0x3a6 <caiBloco+0x30>
+ 39a:	22 85       	ldd	r18, Z+10	; 0x0a
+ 39c:	33 85       	ldd	r19, Z+11	; 0x0b
+ 39e:	21 30       	cpi	r18, 0x01	; 1
+ 3a0:	31 05       	cpc	r19, r1
+ 3a2:	21 f4       	brne	.+8      	; 0x3ac <caiBloco+0x36>
+ 3a4:	02 c0       	rjmp	.+4      	; 0x3aa <caiBloco+0x34>
+					cai = false;
+ 3a6:	89 2f       	mov	r24, r25
+ 3a8:	01 c0       	rjmp	.+2      	; 0x3ac <caiBloco+0x36>
+ 3aa:	89 2f       	mov	r24, r25
+bool caiBloco () {
+	bool cai = true;
+    
+    // Checa se é possível cair
+	for (int i = 0; i < 11; i++) {
+		for (int j = 0; j < 6; j++) {
+ 3ac:	4e 17       	cp	r20, r30
+ 3ae:	5f 07       	cpc	r21, r31
+ 3b0:	61 f7       	brne	.-40     	; 0x38a <caiBloco+0x14>
+// Função que checa se o Bloco pode cair e o faz, caso possível. Retorna se realizou a queda
+bool caiBloco () {
+	bool cai = true;
+    
+    // Checa se é possível cair
+	for (int i = 0; i < 11; i++) {
+ 3b2:	6f 5f       	subi	r22, 0xFF	; 255
+ 3b4:	7f 4f       	sbci	r23, 0xFF	; 255
+ 3b6:	44 5f       	subi	r20, 0xF4	; 244
+ 3b8:	5f 4f       	sbci	r21, 0xFF	; 255
+ 3ba:	6b 30       	cpi	r22, 0x0B	; 11
+ 3bc:	71 05       	cpc	r23, r1
+ 3be:	19 f0       	breq	.+6      	; 0x3c6 <caiBloco+0x50>
+		}
+	}
+}
+
+// Função que checa se o Bloco pode cair e o faz, caso possível. Retorna se realizou a queda
+bool caiBloco () {
+ 3c0:	fa 01       	movw	r30, r20
+ 3c2:	3c 97       	sbiw	r30, 0x0c	; 12
+ 3c4:	e2 cf       	rjmp	.-60     	; 0x38a <caiBloco+0x14>
+		}
+	}
+
+    // Realiza a queda, caso seja possível
+    // Caso o contrário. Integra o Bloco ao cenário
+	if (cai) {
+ 3c6:	81 11       	cpse	r24, r1
+ 3c8:	09 c0       	rjmp	.+18     	; 0x3dc <caiBloco+0x66>
+ 3ca:	6e ef       	ldi	r22, 0xFE	; 254
+ 3cc:	71 e0       	ldi	r23, 0x01	; 1
+ 3ce:	ca e0       	ldi	r28, 0x0A	; 10
+ 3d0:	d2 e0       	ldi	r29, 0x02	; 2
+	}
+}
+
+// Função que checa se o Bloco pode cair e o faz, caso possível. Retorna se realizou a queda
+bool caiBloco () {
+	bool cai = true;
+ 3d2:	1b e0       	ldi	r17, 0x0B	; 11
+ 3d4:	90 e0       	ldi	r25, 0x00	; 0
+		}
+	} else {
+	    for (int j = 0; j < 6; j++) {
+			for (int i = 10; i >= 0; i--) {
+			    if (matrizLEDs[i][j] == 3) {
+			        matrizLEDs[i][j] = 1;
+ 3d6:	a1 e0       	ldi	r26, 0x01	; 1
+ 3d8:	b0 e0       	ldi	r27, 0x00	; 0
+ 3da:	34 c0       	rjmp	.+104    	; 0x444 <caiBloco+0xce>
+ 3dc:	6e ef       	ldi	r22, 0xFE	; 254
+ 3de:	71 e0       	ldi	r23, 0x01	; 1
+ 3e0:	ca e0       	ldi	r28, 0x0A	; 10
+ 3e2:	d2 e0       	ldi	r29, 0x02	; 2
+	}
+}
+
+// Função que checa se o Bloco pode cair e o faz, caso possível. Retorna se realizou a queda
+bool caiBloco () {
+	bool cai = true;
+ 3e4:	1a e0       	ldi	r17, 0x0A	; 10
+ 3e6:	90 e0       	ldi	r25, 0x00	; 0
+	if (cai) {
+		for (int j = 0; j < 6; j++) {
+			for (int i = 10; i >= 0; i--) {
+				if (matrizLEDs[i][j] == 3) {
+					matrizLEDs[i][j] = 0;
+					matrizLEDs[i+1][j] = 3;
+ 3e8:	a3 e0       	ldi	r26, 0x03	; 3
+ 3ea:	b0 e0       	ldi	r27, 0x00	; 0
+ 3ec:	15 c0       	rjmp	.+42     	; 0x418 <caiBloco+0xa2>
+    // Realiza a queda, caso seja possível
+    // Caso o contrário. Integra o Bloco ao cenário
+	if (cai) {
+		for (int j = 0; j < 6; j++) {
+			for (int i = 10; i >= 0; i--) {
+				if (matrizLEDs[i][j] == 3) {
+ 3ee:	40 81       	ld	r20, Z
+ 3f0:	51 81       	ldd	r21, Z+1	; 0x01
+ 3f2:	43 30       	cpi	r20, 0x03	; 3
+ 3f4:	51 05       	cpc	r21, r1
+ 3f6:	21 f4       	brne	.+8      	; 0x400 <caiBloco+0x8a>
+					matrizLEDs[i][j] = 0;
+ 3f8:	11 82       	std	Z+1, r1	; 0x01
+ 3fa:	10 82       	st	Z, r1
+					matrizLEDs[i+1][j] = 3;
+ 3fc:	b5 87       	std	Z+13, r27	; 0x0d
+ 3fe:	a4 87       	std	Z+12, r26	; 0x0c
+
+    // Realiza a queda, caso seja possível
+    // Caso o contrário. Integra o Bloco ao cenário
+	if (cai) {
+		for (int j = 0; j < 6; j++) {
+			for (int i = 10; i >= 0; i--) {
+ 400:	21 50       	subi	r18, 0x01	; 1
+ 402:	31 09       	sbc	r19, r1
+ 404:	3c 97       	sbiw	r30, 0x0c	; 12
+ 406:	2f 3f       	cpi	r18, 0xFF	; 255
+ 408:	4f ef       	ldi	r20, 0xFF	; 255
+ 40a:	34 07       	cpc	r19, r20
+ 40c:	81 f7       	brne	.-32     	; 0x3ee <caiBloco+0x78>
+ 40e:	6e 5f       	subi	r22, 0xFE	; 254
+ 410:	7f 4f       	sbci	r23, 0xFF	; 255
+	}
+
+    // Realiza a queda, caso seja possível
+    // Caso o contrário. Integra o Bloco ao cenário
+	if (cai) {
+		for (int j = 0; j < 6; j++) {
+ 412:	6c 17       	cp	r22, r28
+ 414:	7d 07       	cpc	r23, r29
+ 416:	d1 f0       	breq	.+52     	; 0x44c <caiBloco+0xd6>
+	}
+}
+
+// Função que checa se o Bloco pode cair e o faz, caso possível. Retorna se realizou a queda
+bool caiBloco () {
+	bool cai = true;
+ 418:	fb 01       	movw	r30, r22
+ 41a:	21 2f       	mov	r18, r17
+ 41c:	39 2f       	mov	r19, r25
+ 41e:	e7 cf       	rjmp	.-50     	; 0x3ee <caiBloco+0x78>
+			}
+		}
+	} else {
+	    for (int j = 0; j < 6; j++) {
+			for (int i = 10; i >= 0; i--) {
+			    if (matrizLEDs[i][j] == 3) {
+ 420:	40 81       	ld	r20, Z
+ 422:	51 81       	ldd	r21, Z+1	; 0x01
+ 424:	43 30       	cpi	r20, 0x03	; 3
+ 426:	51 05       	cpc	r21, r1
+ 428:	11 f4       	brne	.+4      	; 0x42e <caiBloco+0xb8>
+			        matrizLEDs[i][j] = 1;
+ 42a:	b1 83       	std	Z+1, r27	; 0x01
+ 42c:	a0 83       	st	Z, r26
+ 42e:	21 50       	subi	r18, 0x01	; 1
+ 430:	31 09       	sbc	r19, r1
+ 432:	3c 97       	sbiw	r30, 0x0c	; 12
+				}
+			}
+		}
+	} else {
+	    for (int j = 0; j < 6; j++) {
+			for (int i = 10; i >= 0; i--) {
+ 434:	21 15       	cp	r18, r1
+ 436:	31 05       	cpc	r19, r1
+ 438:	99 f7       	brne	.-26     	; 0x420 <caiBloco+0xaa>
+ 43a:	6e 5f       	subi	r22, 0xFE	; 254
+ 43c:	7f 4f       	sbci	r23, 0xFF	; 255
+					matrizLEDs[i+1][j] = 3;
+				}
+			}
+		}
+	} else {
+	    for (int j = 0; j < 6; j++) {
+ 43e:	6c 17       	cp	r22, r28
+ 440:	7d 07       	cpc	r23, r29
+ 442:	21 f0       	breq	.+8      	; 0x44c <caiBloco+0xd6>
+	}
+}
+
+// Função que checa se o Bloco pode cair e o faz, caso possível. Retorna se realizou a queda
+bool caiBloco () {
+	bool cai = true;
+ 444:	fb 01       	movw	r30, r22
+ 446:	21 2f       	mov	r18, r17
+ 448:	39 2f       	mov	r19, r25
+ 44a:	ea cf       	rjmp	.-44     	; 0x420 <caiBloco+0xaa>
+			}
+	    }
+	}
+
+	return cai;
+}
+ 44c:	df 91       	pop	r29
+ 44e:	cf 91       	pop	r28
+ 450:	1f 91       	pop	r17
+ 452:	08 95       	ret
+
+00000454 <giraBloco>:
+
+// Função para girar o bloco
+void giraBloco() {
+ 454:	4f 92       	push	r4
+ 456:	5f 92       	push	r5
+ 458:	6f 92       	push	r6
+ 45a:	7f 92       	push	r7
+ 45c:	8f 92       	push	r8
+ 45e:	9f 92       	push	r9
+ 460:	af 92       	push	r10
+ 462:	bf 92       	push	r11
+ 464:	cf 92       	push	r12
+ 466:	df 92       	push	r13
+ 468:	ef 92       	push	r14
+ 46a:	ff 92       	push	r15
+ 46c:	0f 93       	push	r16
+ 46e:	1f 93       	push	r17
+ 470:	cf 93       	push	r28
+ 472:	df 93       	push	r29
+ 474:	cd b7       	in	r28, 0x3d	; 61
+ 476:	de b7       	in	r29, 0x3e	; 62
+ 478:	62 97       	sbiw	r28, 0x12	; 18
+ 47a:	0f b6       	in	r0, 0x3f	; 63
+ 47c:	f8 94       	cli
+ 47e:	de bf       	out	0x3e, r29	; 62
+ 480:	0f be       	out	0x3f, r0	; 63
+ 482:	cd bf       	out	0x3d, r28	; 61
+    // Variáveis utilizadas para descobrir a localização do bloco para girar
+	int ultimaLinha = 0, ultimaColuna = 0;
+
+    // Corre a matriz para achar a última Linha
+	for (int i = 10; i >= 0; i--) {
+ 484:	2a e0       	ldi	r18, 0x0A	; 10
+ 486:	30 e0       	ldi	r19, 0x00	; 0
+}
+
+// Função para girar o bloco
+void giraBloco() {
+    // Variáveis utilizadas para descobrir a localização do bloco para girar
+	int ultimaLinha = 0, ultimaColuna = 0;
+ 488:	40 e0       	ldi	r20, 0x00	; 0
+ 48a:	50 e0       	ldi	r21, 0x00	; 0
+
+	return cai;
+}
+
+// Função para girar o bloco
+void giraBloco() {
+ 48c:	00 e0       	ldi	r16, 0x00	; 0
+ 48e:	10 e0       	ldi	r17, 0x00	; 0
+ 490:	1b c0       	rjmp	.+54     	; 0x4c8 <giraBloco+0x74>
+	int ultimaLinha = 0, ultimaColuna = 0;
+
+    // Corre a matriz para achar a última Linha
+	for (int i = 10; i >= 0; i--) {
+		for (int j = 0; j < 6; j++) {
+			if (matrizLEDs[i][j] == 3) {
+ 492:	fd 01       	movw	r30, r26
+ 494:	e8 0f       	add	r30, r24
+ 496:	f9 1f       	adc	r31, r25
+ 498:	ee 0f       	add	r30, r30
+ 49a:	ff 1f       	adc	r31, r31
+ 49c:	ea 57       	subi	r30, 0x7A	; 122
+ 49e:	fe 4f       	sbci	r31, 0xFE	; 254
+ 4a0:	60 81       	ld	r22, Z
+ 4a2:	71 81       	ldd	r23, Z+1	; 0x01
+ 4a4:	63 30       	cpi	r22, 0x03	; 3
+ 4a6:	71 05       	cpc	r23, r1
+ 4a8:	09 f4       	brne	.+2      	; 0x4ac <giraBloco+0x58>
+ 4aa:	ca c0       	rjmp	.+404    	; 0x640 <giraBloco+0x1ec>
+    // Variáveis utilizadas para descobrir a localização do bloco para girar
+	int ultimaLinha = 0, ultimaColuna = 0;
+
+    // Corre a matriz para achar a última Linha
+	for (int i = 10; i >= 0; i--) {
+		for (int j = 0; j < 6; j++) {
+ 4ac:	01 96       	adiw	r24, 0x01	; 1
+ 4ae:	86 30       	cpi	r24, 0x06	; 6
+ 4b0:	91 05       	cpc	r25, r1
+ 4b2:	79 f7       	brne	.-34     	; 0x492 <giraBloco+0x3e>
+void giraBloco() {
+    // Variáveis utilizadas para descobrir a localização do bloco para girar
+	int ultimaLinha = 0, ultimaColuna = 0;
+
+    // Corre a matriz para achar a última Linha
+	for (int i = 10; i >= 0; i--) {
+ 4b4:	21 50       	subi	r18, 0x01	; 1
+ 4b6:	31 09       	sbc	r19, r1
+ 4b8:	33 23       	and	r19, r19
+ 4ba:	34 f4       	brge	.+12     	; 0x4c8 <giraBloco+0x74>
+ 4bc:	9a 01       	movw	r18, r20
+			}
+		}
+	}	
+
+    // Corre a matriz para achar a última Coluna
+	for (int j = 5; j >= 0; j--) {
+ 4be:	85 e0       	ldi	r24, 0x05	; 5
+ 4c0:	90 e0       	ldi	r25, 0x00	; 0
+}
+
+// Função para girar o bloco
+void giraBloco() {
+    // Variáveis utilizadas para descobrir a localização do bloco para girar
+	int ultimaLinha = 0, ultimaColuna = 0;
+ 4c2:	b0 e0       	ldi	r27, 0x00	; 0
+ 4c4:	a0 e0       	ldi	r26, 0x00	; 0
+ 4c6:	24 c0       	rjmp	.+72     	; 0x510 <giraBloco+0xbc>
+
+	return cai;
+}
+
+// Função para girar o bloco
+void giraBloco() {
+ 4c8:	80 2f       	mov	r24, r16
+ 4ca:	91 2f       	mov	r25, r17
+	int ultimaLinha = 0, ultimaColuna = 0;
+
+    // Corre a matriz para achar a última Linha
+	for (int i = 10; i >= 0; i--) {
+		for (int j = 0; j < 6; j++) {
+			if (matrizLEDs[i][j] == 3) {
+ 4cc:	d9 01       	movw	r26, r18
+ 4ce:	aa 0f       	add	r26, r26
+ 4d0:	bb 1f       	adc	r27, r27
+ 4d2:	a2 0f       	add	r26, r18
+ 4d4:	b3 1f       	adc	r27, r19
+ 4d6:	aa 0f       	add	r26, r26
+ 4d8:	bb 1f       	adc	r27, r27
+ 4da:	db cf       	rjmp	.-74     	; 0x492 <giraBloco+0x3e>
+	}	
+
+    // Corre a matriz para achar a última Coluna
+	for (int j = 5; j >= 0; j--) {
+		for (int i = 0; i < 11; i++) {
+			if (matrizLEDs[i][j] == 3) {
+ 4dc:	fb 01       	movw	r30, r22
+ 4de:	ee 0f       	add	r30, r30
+ 4e0:	ff 1f       	adc	r31, r31
+ 4e2:	e6 0f       	add	r30, r22
+ 4e4:	f7 1f       	adc	r31, r23
+ 4e6:	ee 0f       	add	r30, r30
+ 4e8:	ff 1f       	adc	r31, r31
+ 4ea:	e8 0f       	add	r30, r24
+ 4ec:	f9 1f       	adc	r31, r25
+ 4ee:	ee 0f       	add	r30, r30
+ 4f0:	ff 1f       	adc	r31, r31
+ 4f2:	ea 57       	subi	r30, 0x7A	; 122
+ 4f4:	fe 4f       	sbci	r31, 0xFE	; 254
+ 4f6:	01 90       	ld	r0, Z+
+ 4f8:	f0 81       	ld	r31, Z
+ 4fa:	e0 2d       	mov	r30, r0
+ 4fc:	33 97       	sbiw	r30, 0x03	; 3
+ 4fe:	69 f0       	breq	.+26     	; 0x51a <giraBloco+0xc6>
+		}
+	}	
+
+    // Corre a matriz para achar a última Coluna
+	for (int j = 5; j >= 0; j--) {
+		for (int i = 0; i < 11; i++) {
+ 500:	6f 5f       	subi	r22, 0xFF	; 255
+ 502:	7f 4f       	sbci	r23, 0xFF	; 255
+ 504:	6b 30       	cpi	r22, 0x0B	; 11
+ 506:	71 05       	cpc	r23, r1
+ 508:	49 f7       	brne	.-46     	; 0x4dc <giraBloco+0x88>
+			}
+		}
+	}	
+
+    // Corre a matriz para achar a última Coluna
+	for (int j = 5; j >= 0; j--) {
+ 50a:	01 97       	sbiw	r24, 0x01	; 1
+ 50c:	99 23       	and	r25, r25
+ 50e:	1c f0       	brlt	.+6      	; 0x516 <giraBloco+0xc2>
+}
+
+// Função para girar o bloco
+void giraBloco() {
+    // Variáveis utilizadas para descobrir a localização do bloco para girar
+	int ultimaLinha = 0, ultimaColuna = 0;
+ 510:	6b 2f       	mov	r22, r27
+ 512:	7a 2f       	mov	r23, r26
+ 514:	e3 cf       	rjmp	.-58     	; 0x4dc <giraBloco+0x88>
+ 516:	80 e0       	ldi	r24, 0x00	; 0
+ 518:	90 e0       	ldi	r25, 0x00	; 0
+			}
+		}
+	}
+
+    // Matriz para gerar o bloco novo
+	int blocoVirado[3][3] = {{0, 0, 0},
+ 51a:	fe 01       	movw	r30, r28
+ 51c:	31 96       	adiw	r30, 0x01	; 1
+ 51e:	62 e1       	ldi	r22, 0x12	; 18
+ 520:	df 01       	movw	r26, r30
+ 522:	1d 92       	st	X+, r1
+ 524:	6a 95       	dec	r22
+ 526:	e9 f7       	brne	.-6      	; 0x522 <giraBloco+0xce>
+							 {0, 0, 0},
+							 {0, 0, 0}};
+
+    // Preenche a matriz com o bloco virado
+	for (int k = ultimaLinha; k > ultimaLinha-3; k--) {
+ 528:	b9 01       	movw	r22, r18
+ 52a:	63 50       	subi	r22, 0x03	; 3
+ 52c:	71 09       	sbc	r23, r1
+ 52e:	62 17       	cp	r22, r18
+ 530:	73 07       	cpc	r23, r19
+ 532:	0c f0       	brlt	.+2      	; 0x536 <giraBloco+0xe2>
+ 534:	6c c0       	rjmp	.+216    	; 0x60e <giraBloco+0x1ba>
+ 536:	7e 01       	movw	r14, r28
+ 538:	b1 e1       	ldi	r27, 0x11	; 17
+ 53a:	eb 0e       	add	r14, r27
+ 53c:	f1 1c       	adc	r15, r1
+ 53e:	5c 01       	movw	r10, r24
+ 540:	b9 01       	movw	r22, r18
+ 542:	66 0f       	add	r22, r22
+ 544:	77 1f       	adc	r23, r23
+ 546:	62 0f       	add	r22, r18
+ 548:	73 1f       	adc	r23, r19
+ 54a:	66 0f       	add	r22, r22
+ 54c:	77 1f       	adc	r23, r23
+ 54e:	68 0f       	add	r22, r24
+ 550:	79 1f       	adc	r23, r25
+ 552:	66 0f       	add	r22, r22
+ 554:	77 1f       	adc	r23, r23
+ 556:	fb 01       	movw	r30, r22
+ 558:	ea 57       	subi	r30, 0x7A	; 122
+ 55a:	fe 4f       	sbci	r31, 0xFE	; 254
+ 55c:	6f 01       	movw	r12, r30
+ 55e:	4e 01       	movw	r8, r28
+ 560:	fb e0       	ldi	r31, 0x0B	; 11
+ 562:	8f 0e       	add	r8, r31
+ 564:	91 1c       	adc	r9, r1
+		for (int l = ultimaColuna; l > ultimaColuna-3; l--) {
+ 566:	3c 01       	movw	r6, r24
+ 568:	63 e0       	ldi	r22, 0x03	; 3
+ 56a:	66 1a       	sub	r6, r22
+ 56c:	71 08       	sbc	r7, r1
+ 56e:	41 2c       	mov	r4, r1
+ 570:	51 2c       	mov	r5, r1
+ 572:	26 c0       	rjmp	.+76     	; 0x5c0 <giraBloco+0x16c>
+			if (k >= 0 && l >= 0) {
+ 574:	55 23       	and	r21, r21
+ 576:	84 f0       	brlt	.+32     	; 0x598 <giraBloco+0x144>
+ 578:	85 01       	movw	r16, r10
+ 57a:	06 1b       	sub	r16, r22
+ 57c:	17 0b       	sbc	r17, r23
+ 57e:	62 f0       	brmi	.+24     	; 0x598 <giraBloco+0x144>
+			    if (matrizLEDs[k][l] != 1) {
+ 580:	0d 91       	ld	r16, X+
+ 582:	1c 91       	ld	r17, X
+ 584:	11 97       	sbiw	r26, 0x01	; 1
+ 586:	01 30       	cpi	r16, 0x01	; 1
+ 588:	11 05       	cpc	r17, r1
+ 58a:	19 f0       	breq	.+6      	; 0x592 <giraBloco+0x13e>
+				    blocoVirado[2-(ultimaColuna-l)][2-(ultimaLinha-k)] = matrizLEDs[k][l];
+ 58c:	11 83       	std	Z+1, r17	; 0x01
+ 58e:	00 83       	st	Z, r16
+ 590:	05 c0       	rjmp	.+10     	; 0x59c <giraBloco+0x148>
+			    } else {
+			        blocoVirado[2-(ultimaColuna-l)][2-(ultimaLinha-k)] = 0;
+ 592:	11 82       	std	Z+1, r1	; 0x01
+ 594:	10 82       	st	Z, r1
+ 596:	02 c0       	rjmp	.+4      	; 0x59c <giraBloco+0x148>
+			    }
+			} else {
+				blocoVirado[2-(ultimaColuna-l)][2-(ultimaLinha-k)] = 0;
+ 598:	11 82       	std	Z+1, r1	; 0x01
+ 59a:	10 82       	st	Z, r1
+ 59c:	6f 5f       	subi	r22, 0xFF	; 255
+ 59e:	7f 4f       	sbci	r23, 0xFF	; 255
+ 5a0:	36 97       	sbiw	r30, 0x06	; 6
+ 5a2:	12 97       	sbiw	r26, 0x02	; 2
+							 {0, 0, 0},
+							 {0, 0, 0}};
+
+    // Preenche a matriz com o bloco virado
+	for (int k = ultimaLinha; k > ultimaLinha-3; k--) {
+		for (int l = ultimaColuna; l > ultimaColuna-3; l--) {
+ 5a4:	63 30       	cpi	r22, 0x03	; 3
+ 5a6:	71 05       	cpc	r23, r1
+ 5a8:	29 f7       	brne	.-54     	; 0x574 <giraBloco+0x120>
+	int blocoVirado[3][3] = {{0, 0, 0},
+							 {0, 0, 0},
+							 {0, 0, 0}};
+
+    // Preenche a matriz com o bloco virado
+	for (int k = ultimaLinha; k > ultimaLinha-3; k--) {
+ 5aa:	41 50       	subi	r20, 0x01	; 1
+ 5ac:	51 09       	sbc	r21, r1
+ 5ae:	a2 e0       	ldi	r26, 0x02	; 2
+ 5b0:	ea 1a       	sub	r14, r26
+ 5b2:	f1 08       	sbc	r15, r1
+ 5b4:	bc e0       	ldi	r27, 0x0C	; 12
+ 5b6:	cb 1a       	sub	r12, r27
+ 5b8:	d1 08       	sbc	r13, r1
+ 5ba:	e8 14       	cp	r14, r8
+ 5bc:	f9 04       	cpc	r15, r9
+ 5be:	39 f1       	breq	.+78     	; 0x60e <giraBloco+0x1ba>
+		for (int l = ultimaColuna; l > ultimaColuna-3; l--) {
+ 5c0:	68 16       	cp	r6, r24
+ 5c2:	79 06       	cpc	r7, r25
+ 5c4:	94 f7       	brge	.-28     	; 0x5aa <giraBloco+0x156>
+ 5c6:	d6 01       	movw	r26, r12
+ 5c8:	f7 01       	movw	r30, r14
+ 5ca:	64 2d       	mov	r22, r4
+ 5cc:	75 2d       	mov	r23, r5
+ 5ce:	d2 cf       	rjmp	.-92     	; 0x574 <giraBloco+0x120>
+	}
+
+    //Retorna o Bloco Virado à Matriz
+	for (int k = 0; k < 3; k++) {
+		for (int l = 0; l < 3; l++) {
+			if ((ultimaLinha-k) >= 0 && (ultimaColuna-l) >= 0) {
+ 5d0:	33 23       	and	r19, r19
+ 5d2:	4c f0       	brlt	.+18     	; 0x5e6 <giraBloco+0x192>
+ 5d4:	68 01       	movw	r12, r16
+ 5d6:	c8 1a       	sub	r12, r24
+ 5d8:	d9 0a       	sbc	r13, r25
+ 5da:	2a f0       	brmi	.+10     	; 0x5e6 <giraBloco+0x192>
+				matrizLEDs[ultimaLinha-k][ultimaColuna-l] = blocoVirado[2-k][2-l];
+ 5dc:	c0 80       	ld	r12, Z
+ 5de:	d1 80       	ldd	r13, Z+1	; 0x01
+ 5e0:	11 96       	adiw	r26, 0x01	; 1
+ 5e2:	dc 92       	st	X, r13
+ 5e4:	ce 92       	st	-X, r12
+		}
+	}
+
+    //Retorna o Bloco Virado à Matriz
+	for (int k = 0; k < 3; k++) {
+		for (int l = 0; l < 3; l++) {
+ 5e6:	01 96       	adiw	r24, 0x01	; 1
+ 5e8:	32 97       	sbiw	r30, 0x02	; 2
+ 5ea:	12 97       	sbiw	r26, 0x02	; 2
+ 5ec:	83 30       	cpi	r24, 0x03	; 3
+ 5ee:	91 05       	cpc	r25, r1
+ 5f0:	79 f7       	brne	.-34     	; 0x5d0 <giraBloco+0x17c>
+ 5f2:	46 50       	subi	r20, 0x06	; 6
+ 5f4:	51 09       	sbc	r21, r1
+ 5f6:	6c 50       	subi	r22, 0x0C	; 12
+ 5f8:	71 09       	sbc	r23, r1
+ 5fa:	21 50       	subi	r18, 0x01	; 1
+ 5fc:	31 09       	sbc	r19, r1
+			}
+		}
+	}
+
+    //Retorna o Bloco Virado à Matriz
+	for (int k = 0; k < 3; k++) {
+ 5fe:	4e 15       	cp	r20, r14
+ 600:	5f 05       	cpc	r21, r15
+ 602:	01 f1       	breq	.+64     	; 0x644 <giraBloco+0x1f0>
+							 {0, 0, 0},
+							 {0, 0, 0}};
+
+    // Preenche a matriz com o bloco virado
+	for (int k = ultimaLinha; k > ultimaLinha-3; k--) {
+		for (int l = ultimaColuna; l > ultimaColuna-3; l--) {
+ 604:	db 01       	movw	r26, r22
+ 606:	fa 01       	movw	r30, r20
+ 608:	8a 2d       	mov	r24, r10
+ 60a:	9b 2d       	mov	r25, r11
+ 60c:	e1 cf       	rjmp	.-62     	; 0x5d0 <giraBloco+0x17c>
+ 60e:	ae 01       	movw	r20, r28
+ 610:	4f 5e       	subi	r20, 0xEF	; 239
+ 612:	5f 4f       	sbci	r21, 0xFF	; 255
+ 614:	8c 01       	movw	r16, r24
+ 616:	b9 01       	movw	r22, r18
+ 618:	66 0f       	add	r22, r22
+ 61a:	77 1f       	adc	r23, r23
+ 61c:	62 0f       	add	r22, r18
+ 61e:	73 1f       	adc	r23, r19
+ 620:	66 0f       	add	r22, r22
+ 622:	77 1f       	adc	r23, r23
+ 624:	86 0f       	add	r24, r22
+ 626:	97 1f       	adc	r25, r23
+ 628:	bc 01       	movw	r22, r24
+ 62a:	66 0f       	add	r22, r22
+ 62c:	77 1f       	adc	r23, r23
+ 62e:	6a 57       	subi	r22, 0x7A	; 122
+ 630:	7e 4f       	sbci	r23, 0xFE	; 254
+ 632:	7e 01       	movw	r14, r28
+ 634:	e1 e0       	ldi	r30, 0x01	; 1
+ 636:	ee 1a       	sub	r14, r30
+ 638:	f1 08       	sbc	r15, r1
+ 63a:	a1 2c       	mov	r10, r1
+ 63c:	b1 2c       	mov	r11, r1
+ 63e:	e2 cf       	rjmp	.-60     	; 0x604 <giraBloco+0x1b0>
+	int ultimaLinha = 0, ultimaColuna = 0;
+
+    // Corre a matriz para achar a última Linha
+	for (int i = 10; i >= 0; i--) {
+		for (int j = 0; j < 6; j++) {
+			if (matrizLEDs[i][j] == 3) {
+ 640:	a9 01       	movw	r20, r18
+ 642:	3d cf       	rjmp	.-390    	; 0x4be <giraBloco+0x6a>
+			if ((ultimaLinha-k) >= 0 && (ultimaColuna-l) >= 0) {
+				matrizLEDs[ultimaLinha-k][ultimaColuna-l] = blocoVirado[2-k][2-l];
+			}
+		}
+	}
+}
+ 644:	62 96       	adiw	r28, 0x12	; 18
+ 646:	0f b6       	in	r0, 0x3f	; 63
+ 648:	f8 94       	cli
+ 64a:	de bf       	out	0x3e, r29	; 62
+ 64c:	0f be       	out	0x3f, r0	; 63
+ 64e:	cd bf       	out	0x3d, r28	; 61
+ 650:	df 91       	pop	r29
+ 652:	cf 91       	pop	r28
+ 654:	1f 91       	pop	r17
+ 656:	0f 91       	pop	r16
+ 658:	ff 90       	pop	r15
+ 65a:	ef 90       	pop	r14
+ 65c:	df 90       	pop	r13
+ 65e:	cf 90       	pop	r12
+ 660:	bf 90       	pop	r11
+ 662:	af 90       	pop	r10
+ 664:	9f 90       	pop	r9
+ 666:	8f 90       	pop	r8
+ 668:	7f 90       	pop	r7
+ 66a:	6f 90       	pop	r6
+ 66c:	5f 90       	pop	r5
+ 66e:	4f 90       	pop	r4
+ 670:	08 95       	ret
+
+00000672 <geraBloco>:
+
+// Função que gera um novo Bloco. Escolhe o tipo de bloco e a orientação pseudoaleatoriamente utilizando o timer
+void geraBloco () {
+ 672:	ef 92       	push	r14
+ 674:	ff 92       	push	r15
+ 676:	0f 93       	push	r16
+ 678:	1f 93       	push	r17
+ 67a:	cf 93       	push	r28
+ 67c:	df 93       	push	r29
+ 67e:	cd b7       	in	r28, 0x3d	; 61
+ 680:	de b7       	in	r29, 0x3e	; 62
+ 682:	ce 57       	subi	r28, 0x7E	; 126
+ 684:	d1 09       	sbc	r29, r1
+ 686:	0f b6       	in	r0, 0x3f	; 63
+ 688:	f8 94       	cli
+ 68a:	de bf       	out	0x3e, r29	; 62
+ 68c:	0f be       	out	0x3f, r0	; 63
+ 68e:	cd bf       	out	0x3d, r28	; 61
+    // Matriz com os blocos possíveis
+    int blocos[7][3][3] = {{{3, 3, 0},
+ 690:	8e e7       	ldi	r24, 0x7E	; 126
+ 692:	e0 e0       	ldi	r30, 0x00	; 0
+ 694:	f1 e0       	ldi	r31, 0x01	; 1
+ 696:	de 01       	movw	r26, r28
+ 698:	11 96       	adiw	r26, 0x01	; 1
+ 69a:	01 90       	ld	r0, Z+
+ 69c:	0d 92       	st	X+, r0
+ 69e:	8a 95       	dec	r24
+ 6a0:	e1 f7       	brne	.-8      	; 0x69a <geraBloco+0x28>
+						   {{3, 0, 0},
+						    {3, 3, 0},
+						    {3, 0, 0}}};
+    
+    // Variável bloco será utilizada para Selecionar um bloco dentre os existentes
+	int bloco = TCNT0%7;
+ 6a2:	e6 b5       	in	r30, 0x26	; 38
+ 6a4:	95 e2       	ldi	r25, 0x25	; 37
+ 6a6:	e9 9f       	mul	r30, r25
+ 6a8:	91 2d       	mov	r25, r1
+ 6aa:	11 24       	eor	r1, r1
+ 6ac:	8e 2f       	mov	r24, r30
+ 6ae:	89 1b       	sub	r24, r25
+ 6b0:	86 95       	lsr	r24
+ 6b2:	89 0f       	add	r24, r25
+ 6b4:	86 95       	lsr	r24
+ 6b6:	86 95       	lsr	r24
+ 6b8:	98 2f       	mov	r25, r24
+ 6ba:	99 0f       	add	r25, r25
+ 6bc:	99 0f       	add	r25, r25
+ 6be:	99 0f       	add	r25, r25
+ 6c0:	98 1b       	sub	r25, r24
+ 6c2:	e9 1b       	sub	r30, r25
+ 6c4:	f0 e0       	ldi	r31, 0x00	; 0
+	
+	// Insere o Bloco nas primeiras linhas da matriz
+	for (int k = 0; k < 3; k++) {
+		for (int l = 0; l < 3; l++) {
+		    matrizLEDs[l][k+2] = blocos[bloco][l][k];
+ 6c6:	ee 0f       	add	r30, r30
+ 6c8:	ff 1f       	adc	r31, r31
+ 6ca:	cf 01       	movw	r24, r30
+ 6cc:	88 0f       	add	r24, r24
+ 6ce:	99 1f       	adc	r25, r25
+ 6d0:	88 0f       	add	r24, r24
+ 6d2:	99 1f       	adc	r25, r25
+ 6d4:	88 0f       	add	r24, r24
+ 6d6:	99 1f       	adc	r25, r25
+ 6d8:	e8 0f       	add	r30, r24
+ 6da:	f9 1f       	adc	r31, r25
+ 6dc:	81 e0       	ldi	r24, 0x01	; 1
+ 6de:	90 e0       	ldi	r25, 0x00	; 0
+ 6e0:	8c 0f       	add	r24, r28
+ 6e2:	9d 1f       	adc	r25, r29
+ 6e4:	e8 0f       	add	r30, r24
+ 6e6:	f9 1f       	adc	r31, r25
+ 6e8:	80 81       	ld	r24, Z
+ 6ea:	91 81       	ldd	r25, Z+1	; 0x01
+ 6ec:	90 93 8b 01 	sts	0x018B, r25
+ 6f0:	80 93 8a 01 	sts	0x018A, r24
+ 6f4:	86 81       	ldd	r24, Z+6	; 0x06
+ 6f6:	97 81       	ldd	r25, Z+7	; 0x07
+ 6f8:	90 93 97 01 	sts	0x0197, r25
+ 6fc:	80 93 96 01 	sts	0x0196, r24
+ 700:	84 85       	ldd	r24, Z+12	; 0x0c
+ 702:	95 85       	ldd	r25, Z+13	; 0x0d
+ 704:	90 93 a3 01 	sts	0x01A3, r25
+ 708:	80 93 a2 01 	sts	0x01A2, r24
+ 70c:	82 81       	ldd	r24, Z+2	; 0x02
+ 70e:	93 81       	ldd	r25, Z+3	; 0x03
+ 710:	90 93 8d 01 	sts	0x018D, r25
+ 714:	80 93 8c 01 	sts	0x018C, r24
+ 718:	80 85       	ldd	r24, Z+8	; 0x08
+ 71a:	91 85       	ldd	r25, Z+9	; 0x09
+ 71c:	90 93 99 01 	sts	0x0199, r25
+ 720:	80 93 98 01 	sts	0x0198, r24
+ 724:	86 85       	ldd	r24, Z+14	; 0x0e
+ 726:	97 85       	ldd	r25, Z+15	; 0x0f
+ 728:	90 93 a5 01 	sts	0x01A5, r25
+ 72c:	80 93 a4 01 	sts	0x01A4, r24
+ 730:	84 81       	ldd	r24, Z+4	; 0x04
+ 732:	95 81       	ldd	r25, Z+5	; 0x05
+ 734:	90 93 8f 01 	sts	0x018F, r25
+ 738:	80 93 8e 01 	sts	0x018E, r24
+ 73c:	82 85       	ldd	r24, Z+10	; 0x0a
+ 73e:	93 85       	ldd	r25, Z+11	; 0x0b
+ 740:	90 93 9b 01 	sts	0x019B, r25
+ 744:	80 93 9a 01 	sts	0x019A, r24
+ 748:	80 89       	ldd	r24, Z+16	; 0x10
+ 74a:	91 89       	ldd	r25, Z+17	; 0x11
+ 74c:	90 93 a7 01 	sts	0x01A7, r25
+ 750:	80 93 a6 01 	sts	0x01A6, r24
+		}
+	}
+	
+	// Giros que dará (utilizado para modificar a posição)
+	int giros = TCNT0%4;
+ 754:	86 b5       	in	r24, 0x26	; 38
+ 756:	83 70       	andi	r24, 0x03	; 3
+ 758:	e8 2e       	mov	r14, r24
+ 75a:	f1 2c       	mov	r15, r1
+	
+	// Gira o bloco um número pseudoaleatório de vezes
+	for (int i = 0; i < giros; i++) {
+ 75c:	1e 14       	cp	r1, r14
+ 75e:	1f 04       	cpc	r1, r15
+ 760:	4c f4       	brge	.+18     	; 0x774 <geraBloco+0x102>
+ 762:	00 e0       	ldi	r16, 0x00	; 0
+ 764:	10 e0       	ldi	r17, 0x00	; 0
+	    giraBloco();
+ 766:	0e 94 2a 02 	call	0x454	; 0x454 <giraBloco>
+	
+	// Giros que dará (utilizado para modificar a posição)
+	int giros = TCNT0%4;
+	
+	// Gira o bloco um número pseudoaleatório de vezes
+	for (int i = 0; i < giros; i++) {
+ 76a:	0f 5f       	subi	r16, 0xFF	; 255
+ 76c:	1f 4f       	sbci	r17, 0xFF	; 255
+ 76e:	0e 15       	cp	r16, r14
+ 770:	1f 05       	cpc	r17, r15
+ 772:	cc f3       	brlt	.-14     	; 0x766 <geraBloco+0xf4>
+	    giraBloco();
+	}
+	
+}
+ 774:	c2 58       	subi	r28, 0x82	; 130
+ 776:	df 4f       	sbci	r29, 0xFF	; 255
+ 778:	0f b6       	in	r0, 0x3f	; 63
+ 77a:	f8 94       	cli
+ 77c:	de bf       	out	0x3e, r29	; 62
+ 77e:	0f be       	out	0x3f, r0	; 63
+ 780:	cd bf       	out	0x3d, r28	; 61
+ 782:	df 91       	pop	r29
+ 784:	cf 91       	pop	r28
+ 786:	1f 91       	pop	r17
+ 788:	0f 91       	pop	r16
+ 78a:	ff 90       	pop	r15
+ 78c:	ef 90       	pop	r14
+ 78e:	08 95       	ret
+
+00000790 <main>:
+
+// Rotina principal do Jogo
+int main(void) {
+    // Define o PORTD como saída em HIGH
+	DDRD = 255;
+ 790:	8f ef       	ldi	r24, 0xFF	; 255
+ 792:	8a b9       	out	0x0a, r24	; 10
+	PORTD = 255;
+ 794:	8b b9       	out	0x0b, r24	; 11
+	
+	// Define o PORTC como saída em LOW
+	DDRC = 255;
+ 796:	87 b9       	out	0x07, r24	; 7
+	PORTC = 0;
+ 798:	18 b8       	out	0x08, r1	; 8
+	
+	// Define o PORTB como entrada e habilita o Pull-Up
+	DDRB = 0;
+ 79a:	14 b8       	out	0x04, r1	; 4
+	changeBit (DDRB, 6);
+ 79c:	24 b1       	in	r18, 0x04	; 4
+ 79e:	90 e4       	ldi	r25, 0x40	; 64
+ 7a0:	92 27       	eor	r25, r18
+ 7a2:	94 b9       	out	0x04, r25	; 4
+	PORTB = 255;
+ 7a4:	85 b9       	out	0x05, r24	; 5
+	
+	
+	setBit (PCICR, 0);	// Habilita as Interrupções no PORTB (0 = B, 1 = C e 2 = D)
+ 7a6:	e8 e6       	ldi	r30, 0x68	; 104
+ 7a8:	f0 e0       	ldi	r31, 0x00	; 0
+ 7aa:	80 81       	ld	r24, Z
+ 7ac:	81 60       	ori	r24, 0x01	; 1
+ 7ae:	80 83       	st	Z, r24
+	setBit (PCMSK0, 0);	// Habilita as Interrupções no PB0
+ 7b0:	eb e6       	ldi	r30, 0x6B	; 107
+ 7b2:	f0 e0       	ldi	r31, 0x00	; 0
+ 7b4:	80 81       	ld	r24, Z
+ 7b6:	81 60       	ori	r24, 0x01	; 1
+ 7b8:	80 83       	st	Z, r24
+	setBit (PCMSK0, 1);	// Habilita as Interrupções no PB1
+ 7ba:	80 81       	ld	r24, Z
+ 7bc:	82 60       	ori	r24, 0x02	; 2
+ 7be:	80 83       	st	Z, r24
+	setBit (PCMSK0, 2);	// Habilita as Interrupções no PB2
+ 7c0:	80 81       	ld	r24, Z
+ 7c2:	84 60       	ori	r24, 0x04	; 4
+ 7c4:	80 83       	st	Z, r24
+	setBit (PCMSK0, 3);	// Habilita as Interrupções no PB3
+ 7c6:	80 81       	ld	r24, Z
+ 7c8:	88 60       	ori	r24, 0x08	; 8
+ 7ca:	80 83       	st	Z, r24
+	setBit (PCMSK0, 4);	// Habilita as Interrupções no PB4
+ 7cc:	80 81       	ld	r24, Z
+ 7ce:	80 61       	ori	r24, 0x10	; 16
+ 7d0:	80 83       	st	Z, r24
+	
+	// Abaixo configurando o timer 0
+	// Testouro*clock = prescaler*(TOP+1)
+	OCR0A = 99;			// Setando o top do estouro = 99
+ 7d2:	83 e6       	ldi	r24, 0x63	; 99
+ 7d4:	87 bd       	out	0x27, r24	; 39
+	setBit (TCCR0B, 3);	// Habilitando o Modo Comparação (para o modo estouro bastaria deixar todos em 0)
+ 7d6:	85 b5       	in	r24, 0x25	; 37
+ 7d8:	88 60       	ori	r24, 0x08	; 8
+ 7da:	85 bd       	out	0x25, r24	; 37
+	TCCR0B |= 2;		// Prescaler = 64 (0 = pausa, 1 = 1, 2 = 8, 3 = 64, 4 = 256 e 5 = 1024)
+ 7dc:	85 b5       	in	r24, 0x25	; 37
+ 7de:	82 60       	ori	r24, 0x02	; 2
+ 7e0:	85 bd       	out	0x25, r24	; 37
+	setBit (TIMSK0, 1);	// Habilita Interrupção A do Timer 0
+ 7e2:	ee e6       	ldi	r30, 0x6E	; 110
+ 7e4:	f0 e0       	ldi	r31, 0x00	; 0
+ 7e6:	80 81       	ld	r24, Z
+ 7e8:	82 60       	ori	r24, 0x02	; 2
+ 7ea:	80 83       	st	Z, r24
+	
+	// Abaixo configurando o timer 1
+	// Testouro*clock = prescaler*(TOP+1)
+	OCR1A = 15624;		// Setando o top do estouro = 99
+ 7ec:	88 e0       	ldi	r24, 0x08	; 8
+ 7ee:	9d e3       	ldi	r25, 0x3D	; 61
+ 7f0:	90 93 89 00 	sts	0x0089, r25
+ 7f4:	80 93 88 00 	sts	0x0088, r24
+	setBit (TCCR1B, 3);	// Habilitando o Modo Comparação (para o modo estouro bastaria deixar todos em 0)
+ 7f8:	e1 e8       	ldi	r30, 0x81	; 129
+ 7fa:	f0 e0       	ldi	r31, 0x00	; 0
+ 7fc:	80 81       	ld	r24, Z
+ 7fe:	88 60       	ori	r24, 0x08	; 8
+ 800:	80 83       	st	Z, r24
+	TCCR1B |= 4;		// Prescaler = 256 (0 = pausa, 1 = 1, 2 = 8, 3 = 64, 4 = 256 e 5 = 1024)
+ 802:	80 81       	ld	r24, Z
+ 804:	84 60       	ori	r24, 0x04	; 4
+ 806:	80 83       	st	Z, r24
+	setBit (TIMSK1, 1);	// Habilita Interrupção A do Timer 1
+ 808:	ef e6       	ldi	r30, 0x6F	; 111
+ 80a:	f0 e0       	ldi	r31, 0x00	; 0
+ 80c:	80 81       	ld	r24, Z
+ 80e:	82 60       	ori	r24, 0x02	; 2
+ 810:	80 83       	st	Z, r24
+	
+	sei();              // Habilita as Interrupções
+ 812:	78 94       	sei
+	
+    // Variáveis de Jogo
+	bool blocoCaindo = false, dificuldade = 0;
+ 814:	91 2c       	mov	r9, r1
+			} else {
+				if (checaLinhas()) {
+					checaGravidade();
+				} else {
+					checaDerrota ();
+					blocoCaindo = true;
+ 816:	88 24       	eor	r8, r8
+ 818:	83 94       	inc	r8
+    // Loop Principal
+    while(1) {
+        // Atualização lógica do Jogo
+		if (refresh) {
+		    if (blocoCaindo) {
+				dificuldade = (pontuacao-(pontuacao%20000))/20000;
+ 81a:	00 e2       	ldi	r16, 0x20	; 32
+ 81c:	1e e4       	ldi	r17, 0x4E	; 78
+ 81e:	ee 24       	eor	r14, r14
+ 820:	e3 94       	inc	r14
+ 822:	f1 2c       	mov	r15, r1
+				if (dificuldade > 5) {
+					pontuacao += (dificuldade - 5);
+					dificuldade = 5;
+				}
+				if (ciclosRefresh%(6-dificuldade) == 0) {
+ 824:	0f 2e       	mov	r0, r31
+ 826:	f6 e0       	ldi	r31, 0x06	; 6
+ 828:	cf 2e       	mov	r12, r31
+ 82a:	d1 2c       	mov	r13, r1
+ 82c:	f0 2d       	mov	r31, r0
+ 82e:	0f 2e       	mov	r0, r31
+ 830:	f6 e8       	ldi	r31, 0x86	; 134
+ 832:	af 2e       	mov	r10, r31
+ 834:	f1 e0       	ldi	r31, 0x01	; 1
+ 836:	bf 2e       	mov	r11, r31
+ 838:	f0 2d       	mov	r31, r0
+ 83a:	ca e0       	ldi	r28, 0x0A	; 10
+ 83c:	d2 e0       	ldi	r29, 0x02	; 2
+	bool blocoCaindo = false, dificuldade = 0;
+
+    // Loop Principal
+    while(1) {
+        // Atualização lógica do Jogo
+		if (refresh) {
+ 83e:	80 91 11 02 	lds	r24, 0x0211
+ 842:	88 23       	and	r24, r24
+ 844:	09 f4       	brne	.+2      	; 0x848 <main+0xb8>
+ 846:	7e c0       	rjmp	.+252    	; 0x944 <__stack+0x45>
+		    if (blocoCaindo) {
+ 848:	99 20       	and	r9, r9
+ 84a:	09 f4       	brne	.+2      	; 0x84e <main+0xbe>
+ 84c:	6f c0       	rjmp	.+222    	; 0x92c <__stack+0x2d>
+				dificuldade = (pontuacao-(pontuacao%20000))/20000;
+ 84e:	20 91 7e 01 	lds	r18, 0x017E
+ 852:	30 91 7f 01 	lds	r19, 0x017F
+ 856:	80 91 7e 01 	lds	r24, 0x017E
+ 85a:	90 91 7f 01 	lds	r25, 0x017F
+				if (dificuldade > 5) {
+					pontuacao += (dificuldade - 5);
+					dificuldade = 5;
+				}
+				if (ciclosRefresh%(6-dificuldade) == 0) {
+ 85e:	e0 91 80 01 	lds	r30, 0x0180
+ 862:	f0 91 81 01 	lds	r31, 0x0181
+    // Loop Principal
+    while(1) {
+        // Atualização lógica do Jogo
+		if (refresh) {
+		    if (blocoCaindo) {
+				dificuldade = (pontuacao-(pontuacao%20000))/20000;
+ 866:	b8 01       	movw	r22, r16
+ 868:	0e 94 a4 05 	call	0xb48	; 0xb48 <__divmodhi4>
+ 86c:	a9 01       	movw	r20, r18
+ 86e:	48 1b       	sub	r20, r24
+ 870:	59 0b       	sbc	r21, r25
+ 872:	ca 01       	movw	r24, r20
+ 874:	b8 01       	movw	r22, r16
+ 876:	0e 94 a4 05 	call	0xb48	; 0xb48 <__divmodhi4>
+ 87a:	97 01       	movw	r18, r14
+ 87c:	67 2b       	or	r22, r23
+ 87e:	11 f4       	brne	.+4      	; 0x884 <main+0xf4>
+ 880:	20 e0       	ldi	r18, 0x00	; 0
+ 882:	30 e0       	ldi	r19, 0x00	; 0
+				if (dificuldade > 5) {
+					pontuacao += (dificuldade - 5);
+					dificuldade = 5;
+				}
+				if (ciclosRefresh%(6-dificuldade) == 0) {
+ 884:	b6 01       	movw	r22, r12
+ 886:	62 1b       	sub	r22, r18
+ 888:	73 0b       	sbc	r23, r19
+ 88a:	cf 01       	movw	r24, r30
+ 88c:	0e 94 a4 05 	call	0xb48	; 0xb48 <__divmodhi4>
+ 890:	89 2b       	or	r24, r25
+ 892:	09 f0       	breq	.+2      	; 0x896 <main+0x106>
+ 894:	55 c0       	rjmp	.+170    	; 0x940 <__stack+0x41>
+					if (end) {
+ 896:	80 91 0f 02 	lds	r24, 0x020F
+ 89a:	88 23       	and	r24, r24
+ 89c:	b9 f0       	breq	.+46     	; 0x8cc <main+0x13c>
+ 89e:	f5 01       	movw	r30, r10
+						for (int i = 0; i < 11; i++) {
+							for (int j = 0; j < 6; j++) {
+								matrizLEDs [i][j] = 0;
+ 8a0:	11 82       	std	Z+1, r1	; 0x01
+ 8a2:	10 82       	st	Z, r1
+ 8a4:	13 82       	std	Z+3, r1	; 0x03
+ 8a6:	12 82       	std	Z+2, r1	; 0x02
+ 8a8:	15 82       	std	Z+5, r1	; 0x05
+ 8aa:	14 82       	std	Z+4, r1	; 0x04
+ 8ac:	17 82       	std	Z+7, r1	; 0x07
+ 8ae:	16 82       	std	Z+6, r1	; 0x06
+ 8b0:	11 86       	std	Z+9, r1	; 0x09
+ 8b2:	10 86       	std	Z+8, r1	; 0x08
+ 8b4:	13 86       	std	Z+11, r1	; 0x0b
+ 8b6:	12 86       	std	Z+10, r1	; 0x0a
+ 8b8:	3c 96       	adiw	r30, 0x0c	; 12
+					pontuacao += (dificuldade - 5);
+					dificuldade = 5;
+				}
+				if (ciclosRefresh%(6-dificuldade) == 0) {
+					if (end) {
+						for (int i = 0; i < 11; i++) {
+ 8ba:	ec 17       	cp	r30, r28
+ 8bc:	fd 07       	cpc	r31, r29
+ 8be:	81 f7       	brne	.-32     	; 0x8a0 <main+0x110>
+							for (int j = 0; j < 6; j++) {
+								matrizLEDs [i][j] = 0;
+							}
+						}
+						pontuacao = 0;
+ 8c0:	10 92 7f 01 	sts	0x017F, r1
+ 8c4:	10 92 7e 01 	sts	0x017E, r1
+						end = false;
+ 8c8:	10 92 0f 02 	sts	0x020F, r1
+					}
+
+					if (checaBloco()) {
+ 8cc:	0e 94 f9 00 	call	0x1f2	; 0x1f2 <checaBloco>
+ 8d0:	88 23       	and	r24, r24
+ 8d2:	01 f1       	breq	.+64     	; 0x914 <__stack+0x15>
+						if (up) {
+ 8d4:	80 91 0e 02 	lds	r24, 0x020E
+ 8d8:	88 23       	and	r24, r24
+ 8da:	29 f0       	breq	.+10     	; 0x8e6 <main+0x156>
+							giraBloco();
+ 8dc:	0e 94 2a 02 	call	0x454	; 0x454 <giraBloco>
+							up = false;
+ 8e0:	10 92 0e 02 	sts	0x020E, r1
+ 8e4:	13 c0       	rjmp	.+38     	; 0x90c <__stack+0xd>
+						} else if (left) {
+ 8e6:	80 91 0d 02 	lds	r24, 0x020D
+ 8ea:	88 23       	and	r24, r24
+ 8ec:	31 f0       	breq	.+12     	; 0x8fa <main+0x16a>
+							moveBloco (0);
+ 8ee:	80 e0       	ldi	r24, 0x00	; 0
+ 8f0:	0e 94 1e 01 	call	0x23c	; 0x23c <moveBloco>
+							left = false;
+ 8f4:	10 92 0d 02 	sts	0x020D, r1
+ 8f8:	09 c0       	rjmp	.+18     	; 0x90c <__stack+0xd>
+						} else if (right) {
+ 8fa:	80 91 0c 02 	lds	r24, 0x020C
+ 8fe:	88 23       	and	r24, r24
+ 900:	29 f0       	breq	.+10     	; 0x90c <__stack+0xd>
+							moveBloco (1);
+ 902:	88 2d       	mov	r24, r8
+ 904:	0e 94 1e 01 	call	0x23c	; 0x23c <moveBloco>
+							right = false;
+ 908:	10 92 0c 02 	sts	0x020C, r1
+						}
+						
+						if (!caiBloco()) {
+ 90c:	0e 94 bb 01 	call	0x376	; 0x376 <caiBloco>
+ 910:	98 2e       	mov	r9, r24
+ 912:	02 c0       	rjmp	.+4      	; 0x918 <__stack+0x19>
+							blocoCaindo = false;
+						}
+					} else {
+						geraBloco();
+ 914:	0e 94 39 03 	call	0x672	; 0x672 <geraBloco>
+					}
+
+					pontuacao++;
+ 918:	80 91 7e 01 	lds	r24, 0x017E
+ 91c:	90 91 7f 01 	lds	r25, 0x017F
+ 920:	01 96       	adiw	r24, 0x01	; 1
+ 922:	90 93 7f 01 	sts	0x017F, r25
+ 926:	80 93 7e 01 	sts	0x017E, r24
+ 92a:	0a c0       	rjmp	.+20     	; 0x940 <__stack+0x41>
+				}
+			} else {
+				if (checaLinhas()) {
+ 92c:	0e 94 53 00 	call	0xa6	; 0xa6 <checaLinhas>
+ 930:	88 23       	and	r24, r24
+ 932:	19 f0       	breq	.+6      	; 0x93a <__stack+0x3b>
+					checaGravidade();
+ 934:	0e 94 9c 00 	call	0x138	; 0x138 <checaGravidade>
+ 938:	03 c0       	rjmp	.+6      	; 0x940 <__stack+0x41>
+				} else {
+					checaDerrota ();
+ 93a:	0e 94 e8 00 	call	0x1d0	; 0x1d0 <checaDerrota>
+					blocoCaindo = true;
+ 93e:	98 2c       	mov	r9, r8
+				}
+			}
+
+			refresh = false;
+ 940:	10 92 11 02 	sts	0x0211, r1
+		}
+		
+		//Atualização do Display
+        if (redraw) {
+ 944:	80 91 10 02 	lds	r24, 0x0210
+ 948:	88 23       	and	r24, r24
+ 94a:	09 f4       	brne	.+2      	; 0x94e <__stack+0x4f>
+ 94c:	78 cf       	rjmp	.-272    	; 0x83e <main+0xae>
+        	PORTC = 0;
+ 94e:	18 b8       	out	0x08, r1	; 8
+        	if (matrizLEDs[linha+3][coluna] == 1 || matrizLEDs[linha+3][coluna] == 3) {
+ 950:	20 91 84 01 	lds	r18, 0x0184
+ 954:	30 91 85 01 	lds	r19, 0x0185
+ 958:	80 91 82 01 	lds	r24, 0x0182
+ 95c:	90 91 83 01 	lds	r25, 0x0183
+ 960:	2d 5f       	subi	r18, 0xFD	; 253
+ 962:	3f 4f       	sbci	r19, 0xFF	; 255
+ 964:	f9 01       	movw	r30, r18
+ 966:	ee 0f       	add	r30, r30
+ 968:	ff 1f       	adc	r31, r31
+ 96a:	2e 0f       	add	r18, r30
+ 96c:	3f 1f       	adc	r19, r31
+ 96e:	f9 01       	movw	r30, r18
+ 970:	ee 0f       	add	r30, r30
+ 972:	ff 1f       	adc	r31, r31
+ 974:	e8 0f       	add	r30, r24
+ 976:	f9 1f       	adc	r31, r25
+ 978:	ee 0f       	add	r30, r30
+ 97a:	ff 1f       	adc	r31, r31
+ 97c:	ea 57       	subi	r30, 0x7A	; 122
+ 97e:	fe 4f       	sbci	r31, 0xFE	; 254
+ 980:	80 81       	ld	r24, Z
+ 982:	91 81       	ldd	r25, Z+1	; 0x01
+ 984:	01 97       	sbiw	r24, 0x01	; 1
+ 986:	e1 f0       	breq	.+56     	; 0x9c0 <__stack+0xc1>
+ 988:	20 91 84 01 	lds	r18, 0x0184
+ 98c:	30 91 85 01 	lds	r19, 0x0185
+ 990:	80 91 82 01 	lds	r24, 0x0182
+ 994:	90 91 83 01 	lds	r25, 0x0183
+ 998:	2d 5f       	subi	r18, 0xFD	; 253
+ 99a:	3f 4f       	sbci	r19, 0xFF	; 255
+ 99c:	f9 01       	movw	r30, r18
+ 99e:	ee 0f       	add	r30, r30
+ 9a0:	ff 1f       	adc	r31, r31
+ 9a2:	2e 0f       	add	r18, r30
+ 9a4:	3f 1f       	adc	r19, r31
+ 9a6:	f9 01       	movw	r30, r18
+ 9a8:	ee 0f       	add	r30, r30
+ 9aa:	ff 1f       	adc	r31, r31
+ 9ac:	e8 0f       	add	r30, r24
+ 9ae:	f9 1f       	adc	r31, r25
+ 9b0:	ee 0f       	add	r30, r30
+ 9b2:	ff 1f       	adc	r31, r31
+ 9b4:	ea 57       	subi	r30, 0x7A	; 122
+ 9b6:	fe 4f       	sbci	r31, 0xFE	; 254
+ 9b8:	80 81       	ld	r24, Z
+ 9ba:	91 81       	ldd	r25, Z+1	; 0x01
+ 9bc:	03 97       	sbiw	r24, 0x03	; 3
+ 9be:	69 f4       	brne	.+26     	; 0x9da <__stack+0xdb>
+        		setBit (PORTC, coluna);
+ 9c0:	48 b1       	in	r20, 0x08	; 8
+ 9c2:	20 91 82 01 	lds	r18, 0x0182
+ 9c6:	30 91 83 01 	lds	r19, 0x0183
+ 9ca:	c7 01       	movw	r24, r14
+ 9cc:	02 c0       	rjmp	.+4      	; 0x9d2 <__stack+0xd3>
+ 9ce:	88 0f       	add	r24, r24
+ 9d0:	99 1f       	adc	r25, r25
+ 9d2:	2a 95       	dec	r18
+ 9d4:	e2 f7       	brpl	.-8      	; 0x9ce <__stack+0xcf>
+ 9d6:	84 2b       	or	r24, r20
+ 9d8:	88 b9       	out	0x08, r24	; 8
+        	}
+			redraw = false;
+ 9da:	10 92 10 02 	sts	0x0210, r1
+ 9de:	2f cf       	rjmp	.-418    	; 0x83e <main+0xae>
+
+000009e0 <__vector_3>:
+        }
+    }
+}
+
+// Mudança de estado nos botões gerará interrupção
+ISR (PCINT0_vect) {
+ 9e0:	1f 92       	push	r1
+ 9e2:	0f 92       	push	r0
+ 9e4:	0f b6       	in	r0, 0x3f	; 63
+ 9e6:	0f 92       	push	r0
+ 9e8:	11 24       	eor	r1, r1
+ 9ea:	8f 93       	push	r24
+ 9ec:	9f 93       	push	r25
+	if (!testBit(PINB, 0)) {
+ 9ee:	18 99       	sbic	0x03, 0	; 3
+ 9f0:	04 c0       	rjmp	.+8      	; 0x9fa <__vector_3+0x1a>
+		up = true;
+ 9f2:	81 e0       	ldi	r24, 0x01	; 1
+ 9f4:	80 93 0e 02 	sts	0x020E, r24
+ 9f8:	1e c0       	rjmp	.+60     	; 0xa36 <__vector_3+0x56>
+	} else if (!testBit(PINB, 1)) {
+ 9fa:	19 99       	sbic	0x03, 1	; 3
+ 9fc:	04 c0       	rjmp	.+8      	; 0xa06 <__vector_3+0x26>
+		left = true;
+ 9fe:	81 e0       	ldi	r24, 0x01	; 1
+ a00:	80 93 0d 02 	sts	0x020D, r24
+ a04:	18 c0       	rjmp	.+48     	; 0xa36 <__vector_3+0x56>
+	}else if (!testBit(PINB, 2)) {
+ a06:	1a 99       	sbic	0x03, 2	; 3
+ a08:	04 c0       	rjmp	.+8      	; 0xa12 <__vector_3+0x32>
+		right = true;
+ a0a:	81 e0       	ldi	r24, 0x01	; 1
+ a0c:	80 93 0c 02 	sts	0x020C, r24
+ a10:	12 c0       	rjmp	.+36     	; 0xa36 <__vector_3+0x56>
+	} else if (!testBit(PINB, 3)) {
+ a12:	1b 99       	sbic	0x03, 3	; 3
+ a14:	04 c0       	rjmp	.+8      	; 0xa1e <__vector_3+0x3e>
+		down = true;
+ a16:	81 e0       	ldi	r24, 0x01	; 1
+ a18:	80 93 0b 02 	sts	0x020B, r24
+ a1c:	0c c0       	rjmp	.+24     	; 0xa36 <__vector_3+0x56>
+	} else if (!testBit(PINB, 4)) {
+ a1e:	1c 99       	sbic	0x03, 4	; 3
+ a20:	0a c0       	rjmp	.+20     	; 0xa36 <__vector_3+0x56>
+		if (start) {
+ a22:	80 91 0a 02 	lds	r24, 0x020A
+ a26:	88 23       	and	r24, r24
+ a28:	19 f0       	breq	.+6      	; 0xa30 <__vector_3+0x50>
+			start = false;
+ a2a:	10 92 0a 02 	sts	0x020A, r1
+ a2e:	03 c0       	rjmp	.+6      	; 0xa36 <__vector_3+0x56>
+		} else {
+			start = true;
+ a30:	81 e0       	ldi	r24, 0x01	; 1
+ a32:	80 93 0a 02 	sts	0x020A, r24
+		}
+	}
+	changeBit (PORTB, 6);
+ a36:	95 b1       	in	r25, 0x05	; 5
+ a38:	80 e4       	ldi	r24, 0x40	; 64
+ a3a:	89 27       	eor	r24, r25
+ a3c:	85 b9       	out	0x05, r24	; 5
+}
+ a3e:	9f 91       	pop	r25
+ a40:	8f 91       	pop	r24
+ a42:	0f 90       	pop	r0
+ a44:	0f be       	out	0x3f, r0	; 63
+ a46:	0f 90       	pop	r0
+ a48:	1f 90       	pop	r1
+ a4a:	18 95       	reti
+
+00000a4c <__vector_14>:
+
+// Interrupção do Timer 0, utilizada para ativar o display
+ISR (TIMER0_COMPA_vect) {	
+ a4c:	1f 92       	push	r1
+ a4e:	0f 92       	push	r0
+ a50:	0f b6       	in	r0, 0x3f	; 63
+ a52:	0f 92       	push	r0
+ a54:	11 24       	eor	r1, r1
+ a56:	2f 93       	push	r18
+ a58:	3f 93       	push	r19
+ a5a:	4f 93       	push	r20
+ a5c:	5f 93       	push	r21
+ a5e:	6f 93       	push	r22
+ a60:	8f 93       	push	r24
+ a62:	9f 93       	push	r25
+	coluna++;
+ a64:	80 91 82 01 	lds	r24, 0x0182
+ a68:	90 91 83 01 	lds	r25, 0x0183
+ a6c:	01 96       	adiw	r24, 0x01	; 1
+ a6e:	90 93 83 01 	sts	0x0183, r25
+ a72:	80 93 82 01 	sts	0x0182, r24
+
+	if (coluna == 6) {
+ a76:	80 91 82 01 	lds	r24, 0x0182
+ a7a:	90 91 83 01 	lds	r25, 0x0183
+ a7e:	06 97       	sbiw	r24, 0x06	; 6
+ a80:	b1 f5       	brne	.+108    	; 0xaee <__vector_14+0xa2>
+		coluna = 0;
+ a82:	10 92 83 01 	sts	0x0183, r1
+ a86:	10 92 82 01 	sts	0x0182, r1
+		setBit (PORTD, linha);
+ a8a:	6b b1       	in	r22, 0x0b	; 11
+ a8c:	20 91 84 01 	lds	r18, 0x0184
+ a90:	30 91 85 01 	lds	r19, 0x0185
+ a94:	41 e0       	ldi	r20, 0x01	; 1
+ a96:	50 e0       	ldi	r21, 0x00	; 0
+ a98:	ca 01       	movw	r24, r20
+ a9a:	02 c0       	rjmp	.+4      	; 0xaa0 <__vector_14+0x54>
+ a9c:	88 0f       	add	r24, r24
+ a9e:	99 1f       	adc	r25, r25
+ aa0:	2a 95       	dec	r18
+ aa2:	e2 f7       	brpl	.-8      	; 0xa9c <__vector_14+0x50>
+ aa4:	86 2b       	or	r24, r22
+ aa6:	8b b9       	out	0x0b, r24	; 11
+		linha++;
+ aa8:	80 91 84 01 	lds	r24, 0x0184
+ aac:	90 91 85 01 	lds	r25, 0x0185
+ ab0:	01 96       	adiw	r24, 0x01	; 1
+ ab2:	90 93 85 01 	sts	0x0185, r25
+ ab6:	80 93 84 01 	sts	0x0184, r24
+		if (linha == 8) {
+ aba:	80 91 84 01 	lds	r24, 0x0184
+ abe:	90 91 85 01 	lds	r25, 0x0185
+ ac2:	08 97       	sbiw	r24, 0x08	; 8
+ ac4:	21 f4       	brne	.+8      	; 0xace <__vector_14+0x82>
+			linha = 0;
+ ac6:	10 92 85 01 	sts	0x0185, r1
+ aca:	10 92 84 01 	sts	0x0184, r1
+		}
+		clearBit (PORTD, linha);
+ ace:	6b b1       	in	r22, 0x0b	; 11
+ ad0:	20 91 84 01 	lds	r18, 0x0184
+ ad4:	30 91 85 01 	lds	r19, 0x0185
+ ad8:	41 e0       	ldi	r20, 0x01	; 1
+ ada:	50 e0       	ldi	r21, 0x00	; 0
+ adc:	ca 01       	movw	r24, r20
+ ade:	02 c0       	rjmp	.+4      	; 0xae4 <__vector_14+0x98>
+ ae0:	88 0f       	add	r24, r24
+ ae2:	99 1f       	adc	r25, r25
+ ae4:	2a 95       	dec	r18
+ ae6:	e2 f7       	brpl	.-8      	; 0xae0 <__vector_14+0x94>
+ ae8:	80 95       	com	r24
+ aea:	86 23       	and	r24, r22
+ aec:	8b b9       	out	0x0b, r24	; 11
+	}
+
+	redraw = true;
+ aee:	81 e0       	ldi	r24, 0x01	; 1
+ af0:	80 93 10 02 	sts	0x0210, r24
+}
+ af4:	9f 91       	pop	r25
+ af6:	8f 91       	pop	r24
+ af8:	6f 91       	pop	r22
+ afa:	5f 91       	pop	r21
+ afc:	4f 91       	pop	r20
+ afe:	3f 91       	pop	r19
+ b00:	2f 91       	pop	r18
+ b02:	0f 90       	pop	r0
+ b04:	0f be       	out	0x3f, r0	; 63
+ b06:	0f 90       	pop	r0
+ b08:	1f 90       	pop	r1
+ b0a:	18 95       	reti
+
+00000b0c <__vector_11>:
+
+// Interrupção do Timer 1, configura a passagem do tempo
+ISR (TIMER1_COMPA_vect) {
+ b0c:	1f 92       	push	r1
+ b0e:	0f 92       	push	r0
+ b10:	0f b6       	in	r0, 0x3f	; 63
+ b12:	0f 92       	push	r0
+ b14:	11 24       	eor	r1, r1
+ b16:	8f 93       	push	r24
+ b18:	9f 93       	push	r25
+	if (!start) {
+ b1a:	80 91 0a 02 	lds	r24, 0x020A
+ b1e:	81 11       	cpse	r24, r1
+ b20:	0c c0       	rjmp	.+24     	; 0xb3a <__vector_11+0x2e>
+		ciclosRefresh++;
+ b22:	80 91 80 01 	lds	r24, 0x0180
+ b26:	90 91 81 01 	lds	r25, 0x0181
+ b2a:	01 96       	adiw	r24, 0x01	; 1
+ b2c:	90 93 81 01 	sts	0x0181, r25
+ b30:	80 93 80 01 	sts	0x0180, r24
+		
+		refresh = true;
+ b34:	81 e0       	ldi	r24, 0x01	; 1
+ b36:	80 93 11 02 	sts	0x0211, r24
+	}
+ b3a:	9f 91       	pop	r25
+ b3c:	8f 91       	pop	r24
+ b3e:	0f 90       	pop	r0
+ b40:	0f be       	out	0x3f, r0	; 63
+ b42:	0f 90       	pop	r0
+ b44:	1f 90       	pop	r1
+ b46:	18 95       	reti
+
+00000b48 <__divmodhi4>:
+ b48:	97 fb       	bst	r25, 7
+ b4a:	07 2e       	mov	r0, r23
+ b4c:	16 f4       	brtc	.+4      	; 0xb52 <__divmodhi4+0xa>
+ b4e:	00 94       	com	r0
+ b50:	07 d0       	rcall	.+14     	; 0xb60 <__divmodhi4_neg1>
+ b52:	77 fd       	sbrc	r23, 7
+ b54:	09 d0       	rcall	.+18     	; 0xb68 <__divmodhi4_neg2>
+ b56:	0e 94 b8 05 	call	0xb70	; 0xb70 <__udivmodhi4>
+ b5a:	07 fc       	sbrc	r0, 7
+ b5c:	05 d0       	rcall	.+10     	; 0xb68 <__divmodhi4_neg2>
+ b5e:	3e f4       	brtc	.+14     	; 0xb6e <__divmodhi4_exit>
+
+00000b60 <__divmodhi4_neg1>:
+ b60:	90 95       	com	r25
+ b62:	81 95       	neg	r24
+ b64:	9f 4f       	sbci	r25, 0xFF	; 255
+ b66:	08 95       	ret
+
+00000b68 <__divmodhi4_neg2>:
+ b68:	70 95       	com	r23
+ b6a:	61 95       	neg	r22
+ b6c:	7f 4f       	sbci	r23, 0xFF	; 255
+
+00000b6e <__divmodhi4_exit>:
+ b6e:	08 95       	ret
+
+00000b70 <__udivmodhi4>:
+ b70:	aa 1b       	sub	r26, r26
+ b72:	bb 1b       	sub	r27, r27
+ b74:	51 e1       	ldi	r21, 0x11	; 17
+ b76:	07 c0       	rjmp	.+14     	; 0xb86 <__udivmodhi4_ep>
+
+00000b78 <__udivmodhi4_loop>:
+ b78:	aa 1f       	adc	r26, r26
+ b7a:	bb 1f       	adc	r27, r27
+ b7c:	a6 17       	cp	r26, r22
+ b7e:	b7 07       	cpc	r27, r23
+ b80:	10 f0       	brcs	.+4      	; 0xb86 <__udivmodhi4_ep>
+ b82:	a6 1b       	sub	r26, r22
+ b84:	b7 0b       	sbc	r27, r23
+
+00000b86 <__udivmodhi4_ep>:
+ b86:	88 1f       	adc	r24, r24
+ b88:	99 1f       	adc	r25, r25
+ b8a:	5a 95       	dec	r21
+ b8c:	a9 f7       	brne	.-22     	; 0xb78 <__udivmodhi4_loop>
+ b8e:	80 95       	com	r24
+ b90:	90 95       	com	r25
+ b92:	bc 01       	movw	r22, r24
+ b94:	cd 01       	movw	r24, r26
+ b96:	08 95       	ret
+
+00000b98 <_exit>:
+ b98:	f8 94       	cli
+
+00000b9a <__stop_program>:
+ b9a:	ff cf       	rjmp	.-2      	; 0xb9a <__stop_program>

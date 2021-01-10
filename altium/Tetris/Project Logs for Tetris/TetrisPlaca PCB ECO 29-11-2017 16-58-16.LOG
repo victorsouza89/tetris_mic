@@ -1,0 +1,14 @@
+Change Component Footprint: Designator=Porta C Old Footprint=KRE_6 New Footprint=HDR1X6
+Change Component Footprint: Designator=Porta D Old Footprint=KRE_8 New Footprint=HDR1X8
+Change Component Comment : Designator=Porta C Old Comment=Terminal New Comment=Header 6
+Change Component Comment : Designator=Porta D Old Comment=Terminal New Comment=Header 8
+Change component parameters: Designator = "Porta C"; Footprint = "HDR1X6"; UniqueID = "\LPWXCOAY"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Change component parameters: Designator = "Porta D"; Footprint = "HDR1X8"; UniqueID = "\MIWLDJFN"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
